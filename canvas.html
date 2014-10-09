@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas</title>
+</head>
+<body>
+	<!-- <canvas id="example" width="400" height="400">
+		该浏览器不支持canvas标签
+	</canvas> -->
+<script type="text/javascript">
+	(function(){
+		var canvas=document.createElement("canvas");
+		var context=canvas.getContext("2d");
+		canvas.width=600;
+		canvas.height=600;
+		document.body.appendChild(canvas);
+		context.fillRect(0,0,canvas.width,canvas.height);
+
+		//draw a particle
+		context.fillStyle="pink";
+		context.fillRect(300,200,10,10);
+		context.beginPath();
+		context.fillStyle="pink";
+		context.arc(500,200,10,0,Math.PI*2,true);
+		context.closePath();
+		context.fill();
+	})();
+</script>
+</body>
+</html>
