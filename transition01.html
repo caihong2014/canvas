@@ -1,0 +1,472 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉_HTML5涓枃缃� - 涓浗棰嗗厛鐨凥TML5鎶€鏈棬鎴�</title>
+<meta name="keywords" content="html5璧勮,html5璺崇悆鏁堟灉" />
+<meta name="description" content="鍦ㄧ嚎婕旂ず 鏈湴涓嬭浇 浠婂ぉ鎴戜滑鍒嗕韩涓€涓潵鑷簬 html5canvastutorials 鐨勮秴閰峰脊璺崇悆鏁堟灉锛岃繖閲屾垜浠娇鐢ㄧ函HTML5鐨勭敾甯冩潵瀹炵幇鍔ㄧ敾鍙婂叾鍥惧舰銆傛暣涓晥鏋滀娇鐢ㄥ皬鐞冩潵缁勫悎鐢熸垚瀛椾綋锛屽鏋滀綘鐨勯紶鏍囬€�" />
+<meta name="author" content="s7mmer" />
+<meta name="copyright" content="Copyright (c) 2011 HTML5China.com All Rights Reserved." /> 
+<!--[if lt IE 9]><script src="http://www.html5china.com/templets/html5/scripts/html5.js"></script><![endif]-->
+<link rel="stylesheet" type="text/css" href="http://www.html5china.com/templets/html5/css/default.css">
+<link rel="stylesheet" type="text/css" href="http://www.html5china.com/templets/html5/css/article.css">
+<link href="http://www.html5china.com/s7mmer/img/insertCode.css" rel="stylesheet" type="text/css" /> 
+<script src="http://cbjs.baidu.com/js/m.js"></script> 
+<script src="http://www.html5china.com/include/dedeajax2.js"></script>
+<script>
+BAIDU_CLB_preloadSlots("220239","220240","220241");
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('鎮ㄥ垰鎵嶅凡琛ㄥ喅杩囦簡鍠旓紒'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("http://www.html5china.com/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function mood(){ 
+  var mood_obj = document.getElementById('_mood'); 
+  myajax = new DedeAjax(mood_obj,false,false,"","",""); 
+  myajax.SendGet2("http://www.html5china.com/plus/mood/mood.php?aid=3636&up="+10*Math.random()); 
+  DedeXHTTP = null; 
+} 
+function moodGet(mood) 
+{ 
+  var mood_obj = document.getElementById('_mood'); 
+  myajax = new DedeAjax(mood_obj,false,false,"","",""); 
+  myajax.SendGet2("http://www.html5china.com/plus/mood/mood.php?aid=3636&action=mood&mood="+mood+"&up="+10*Math.random()); 
+  myajax = null; 
+} 
+function check(){
+		document.formsearch.action="http://www.html5china.com/plus/search.php"
+	} 
+
+//浠ヤ笅鏄疄鐜板鍒剁殑浠ｇ爜锛岃鑷繁娣诲姞
+//javascript
+function $(id)
+{
+	return document.getElementById(id);
+}
+
+//澶嶅埗鏂囨湰
+function copyIdText(id)
+{
+  copy( $(id).innerText,$(id) );
+}
+function copyIdHtml(id)
+{
+  copy( $(id).innerHTML,$(id) );
+}
+
+function copy(txt,obj)
+{       
+   if(window.clipboardData) 
+   {        
+        window.clipboardData.clearData();        
+        window.clipboardData.setData("Text", txt);
+        alert("澶嶅埗鎴愬姛锛�")
+        if(obj.style.display != 'none'){
+	  var rng = document.body.createTextRange();
+	  rng.moveToElementText(obj);
+	  rng.scrollIntoView();
+	  rng.select();
+	  rng.collapse(false);  
+       }
+   }
+   else
+    alert("璇烽€変腑鏂囨湰锛屼娇鐢� Ctrl+C 澶嶅埗!");
+} 
+</script>
+</head>
+
+<body>
+<!--header-->
+<header id="top">
+  <h1 class="logo"><a href="http://www.html5china.com/" title="HTML5涓枃缃�">HTML5</a></h1>
+  <section class="header_top">
+    <div class="tools"><span>[ <a href="http://bbs.html5china.com/member.php?mod=logging&action=login" target="_blank" title="HTML5涓枃璁哄潧">鐧婚檰璁哄潧</a> <a href="http://bbs.html5china.com/member.php?mod=register" target="_blank" title="HTML5涓枃璁哄潧娉ㄥ唽">娉ㄥ唽</a> ]</span> <a href='#' onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.html5China.com');">璁句负棣栭〉</a> <a href="javascript:window.external.addFavorite('http://www.html5China.com','HTML5涓枃缃� - 涓浗棰嗗厛鐨凥TML5鎶€鏈棬鎴�');">鏀惰棌鏈珯</a> <a href="/sitemap.html" title="缃戠珯鍦板浘">缃戠珯鍦板浘</a> <a href="/rssmap.html" title="RSS鍦板浘"><img src="http://www.html5china.com/templets/html5/images/rss.gif" width="13" height="13" alt="RSS鍦板浘"/></a>聽</div>
+    <nav> 
+      <ul>
+        <li><a href="/index.html" title="HTML5">棣� 椤�</a></li>
+        <li><a href="http://www.html5china.com/news/" title="HTML5涓氱晫">HTML5涓氱晫</a></li>
+        <li><a href="http://www.html5china.com/course/" title="HTML5鏁欑▼">HTML5鏁欑▼</a></li>
+        <li><a href="http://www.html5china.com/demo/" title="HTML5缃戠珯">HTML5缃戠珯</a></li>
+        <li><a href="http://www.html5china.com/game/" title="HTML5娓告垙">HTML5娓告垙</a></li>
+        <li><a href="http://www.html5china.com/CSS3/" title="CSS3鏁欑▼">CSS3鏁欑▼</a></li>
+        <li><a href="http://www.html5china.com/js/" title="JS鏁欑▼">JS鏁欑▼</a></li>
+        <li><a href="http://www.html5china.com/video/" title="瑙嗛鏁欑▼">瑙嗛鏁欑▼</a></li>
+        <li class="last"><a href="http://bbs.html5china.com" target="_blank" title="HTML5涓枃璁哄潧">HTML5涓枃璁哄潧</a></li>
+      </ul>
+    </nav>
+  </section>
+  <div class="clean"></div>
+  <section class="submenu">
+    <ul>
+      <li class="title">HTML5鐗规€э細</li>
+       <li><a href="http://www.html5china.com/HTML5features/canvas/" title="Canvas">Canvas</a>|</li>
+       <li><a href="http://www.html5china.com/HTML5features/WebGL/" title="WebGL">WebGL</a>|</li>
+       <li><a href="http://www.html5china.com/HTML5features/SVG/" title="SVG">SVG</a>|</li>
+       <li><a href="http://www.html5china.com/HTML5features/video/" title="Video">Video</a>|</li>
+       <li><a href="http://www.html5china.com/HTML5features/form/" title="Form">Form</a>|</li>
+       <li><a href="http://www.html5china.com/HTML5features/selector/" title="閫夋嫨鍣�">閫夋嫨鍣�</a>|</li>
+       <li><a href="http://www.html5china.com/HTML5features/LocalStorage/" title="鏈湴鍌ㄥ瓨">鏈湴鍌ㄥ瓨</a>|</li>
+       <li><a href="http://www.html5china.com/HTML5features/WebSQLDatabases/" title="鏈湴鏁版嵁搴�">鏈湴鏁版嵁搴�</a>|</li>
+       <li><a href="http://www.html5china.com/HTML5features/OfflineApplications/" title="绂荤嚎搴旂敤">绂荤嚎搴旂敤</a>|</li>
+       <li><a href="http://www.html5china.com/HTML5features/worker/" title="WebWorker">WebWorker</a>|</li>
+       <li><a href="http://www.html5china.com/HTML5features/WebSocket/" title="WebSocket">WebSocket</a>|</li>
+       <li><a href="http://www.html5china.com/HTML5features/Notifications/" title="妗岄潰鎻愰啋">妗岄潰鎻愰啋</a>|</li>
+       <li><a href="http://www.html5china.com/HTML5features/DrapAndDrop/" title="鎷栨嫿">鎷栨嫿</a>|</li>
+       <li><a href="http://www.html5china.com/HTML5features/Geolocation/" title="鍦扮悊浣嶇疆瀹氫綅">鍦扮悊浣嶇疆瀹氫綅</a></li>
+    </ul>
+  </section>
+  <!--googleAd-->
+  <section class="googleAd_head">
+     <div><!-- 骞垮憡浣嶏細椤堕儴1_960x90 -->
+     <script>BAIDU_CLB_fillSlot("220239");</script>
+     </div>
+  </section>
+  <!--end googleAd-->
+  <section class="search clearfix">
+    <div class="tag"> <strong>鐑悳锛�</strong> <a href='http://www.html5china.com/tags.php?/html5+canvas/' title="html5 canvas">html5 canvas</a>  <a href='http://www.html5china.com/tags.php?/html5+Canvas/' title="html5 Canvas">html5 Canvas</a>  <a href='http://www.html5china.com/tags.php?/html5+canvas/' title="html5 canvas">html5 canvas</a>  <a href='http://www.html5china.com/tags.php?/html5+canvas/' title="html5 canvas">html5 canvas</a>  <a href='http://www.html5china.com/tags.php?/jquery%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/' title="jquery瑙嗛鏁欑▼">jquery瑙嗛鏁欑▼</a>  <a href='http://www.html5china.com/tags.php?/HTML5%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/' title="HTML5鍩虹鏁欑▼">HTML5鍩虹鏁欑▼</a>  <a href='http://www.html5china.com/tags.php?/html5%E8%B5%84%E8%AE%AF/' title="html5璧勮">html5璧勮</a>  <a href='http://www.html5china.com/tags.php?/HTML5%E6%B8%B8%E6%88%8F/' title="HTML5娓告垙">HTML5娓告垙</a>  <a href='http://www.html5china.com/tags.php?/jquery%E6%95%99%E7%A8%8B/' title="jquery鏁欑▼">jquery鏁欑▼</a>  <a href='http://www.html5china.com/tags.php?/html5+3d/' title="html5 3d">html5 3d</a> 
+    </div>
+    <div class="searchform">  
+       <form  name="formsearch" action="" onSubmit="check();">
+          <input type="hidden" name="domains" value="www.html5china.com">
+          <input type="hidden" name="kwtype" value="0" />
+          <input id="search-keyword" name="q"  type="text" class="sinput" value="璇疯緭鍏ュ叧閿瓧" onfocus="if(this.value=='璇疯緭鍏ュ叧閿瓧'){this.value='';}"  onblur="if(this.value==''){this.value='璇疯緭鍏ュ叧閿瓧';}">
+          <input name="sbtn" type="submit" class="sbtn" value="绔欏唴鎼滅储">
+          <input type="hidden" name="client" value="pub-9280232748837488">
+          <input type="hidden" name="forid" value="1">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="oe" value="UTF-8">
+          <input type="hidden" name="safe" value="active">
+          <input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1">
+          <input type="hidden" name="hl" value="zh-CN">
+        </form> 
+    </div>
+  </section>
+</header>
+<!--end header--> 
+<article class="main clearfix">  
+    <section class="leftsider">
+      <div class="firstdiv">
+        <div class="location">浣犳墍鍦ㄧ殑浣嶇疆锛�<a href='http://www.html5china.comhttp://www.html5china.com/'>棣� 椤�</a> > <a href='http://www.html5china.com/html5GameDevelopment/'>HTML5娓告垙寮€鍙�</a> > </div>
+        <div class="viewbox">
+          <h2 class="title">鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉</h2>
+          <p class="info">鍙戝竷鏃堕棿锛�2012-05-10 浣滆€咃細灏忔兂 鏉ユ簮锛氭湭鐭� <a href="#postform" title="鎴戣璇勮">鎴戣璇勮</a></p>
+          <p class="summary">鍦ㄧ嚎婕旂ず 鏈湴涓嬭浇 浠婂ぉ鎴戜滑鍒嗕韩涓€涓潵鑷簬 html5canvastutorials 鐨勮秴閰峰脊璺崇悆鏁堟灉锛岃繖閲屾垜浠娇鐢ㄧ函HTML5鐨勭敾甯冩潵瀹炵幇鍔ㄧ敾鍙婂叾鍥惧舰銆傛暣涓晥鏋滀娇鐢ㄥ皬鐞冩潵缁勫悎鐢熸垚瀛椾綋锛屽鏋滀綘鐨勯紶鏍囬€尖€�</p> 
+          <!--content-->
+          <div class="content">
+            <p>&nbsp;<img src="http://www.html5china.com/uploads/allimg/120510/2354542133-0.jpg" alt="鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉" /></p>
+<p><a href="http://www.gbin1.com/technology/html/20120305html5canvasgbin1/demo.html" target="_blank" title="gbin1.com">鍦ㄧ嚎婕旂ず</a>&nbsp;&nbsp;<a href="http://www.gbin1.com/technology/html/20120305html5canvasgbin1/download.html" target="_blank" title="gbin1.com">鏈湴涓嬭浇</a></p>
+<p>浠婂ぉ鎴戜滑鍒嗕韩涓€涓潵鑷簬<a href="http://www.html5canvastutorials.com/" target="_blank" title="html5canvastutorials">html5canvastutorials</a>鐨勮秴閰峰脊璺崇悆鏁堟灉锛岃繖閲屾垜浠娇鐢ㄧ函HTML5鐨�<a href='http://www.html5china.com/HTML5features/canvas/' title='鐢诲竷' target='_blank'><u>鐢诲竷</u></a>鏉ュ疄鐜板姩鐢诲強鍏跺浘褰€€傛暣涓晥鏋滀娇鐢ㄥ皬鐞冩潵缁勫悎鐢熸垚瀛椾綋锛屽鏋滀綘鐨勯紶鏍囬€艰繎杩欎簺灏忕悆锛屽畠浠細鍥涙暎鑰岄€冿紝褰撲綘鐨勯紶鏍囩寮€鍚庯紝瀹冧滑鍙堣嚜鍔ㄥ鍘燂紝鏁堟灉寰堥叿锛屽笇鏈涘ぇ瀹跺枩娆紒</p>
+<pre>
+       &lt;script&gt;<br />            window.requestAnimFrame = (function(callback){<br />                return window.requestAnimationFrame ||<br />                window.webkitRequestAnimationFrame ||<br />                window.mozRequestAnimationFrame ||<br />                window.oRequestAnimationFrame ||<br />                window.msRequestAnimationFrame ||<br />                function(callback){<br />                    window.setTimeout(callback, 1000 / 60);<br />                };<br />            })();<br />            <br />            function initBalls(){<br />                balls = [];<br />                <br />                var dark = &quot;#202020&quot;;<br />                var red = &quot;#EF2B36&quot;;<br />                var blue = &quot;#2B99E6&quot;;<br />                var green = &quot;#02A817&quot;;<br />                <br />                //G<br />                balls.push(new Ball(173, 63, 0, 0, dark));<br />                balls.push(new Ball(158, 53, 0, 0, dark));<br />                balls.push(new Ball(143, 52, 0, 0, dark));<br />                balls.push(new Ball(130, 53, 0, 0, dark));<br />                balls.push(new Ball(117, 58, 0, 0, dark));<br />                balls.push(new Ball(110, 70, 0, 0, dark));<br />                balls.push(new Ball(102, 82, 0, 0, dark));<br />                balls.push(new Ball(104, 96, 0, 0, dark));<br />                balls.push(new Ball(105, 107, 0, 0, dark));<br />                balls.push(new Ball(110, 120, 0, 0, dark));<br />                balls.push(new Ball(124, 130, 0, 0, dark));<br />                balls.push(new Ball(139, 136, 0, 0, dark));<br />                balls.push(new Ball(152, 136, 0, 0, dark));<br />                balls.push(new Ball(166, 136, 0, 0, dark));<br />                balls.push(new Ball(174, 127, 0, 0, dark));<br />                balls.push(new Ball(179, 110, 0, 0, dark));<br />                balls.push(new Ball(166, 109, 0, 0, dark));<br />                balls.push(new Ball(156, 110, 0, 0, dark));<br /><br />				//B<br />				balls.push(new Ball(248, 125, 0, 0, dark));<br />				balls.push(new Ball(246, 120, 0, 0, dark));<br />				balls.push(new Ball(245, 110, 0, 0, dark));<br />				balls.push(new Ball(235, 100, 0, 0, dark));<br />				balls.push(new Ball(220, 90, 0, 0, dark));<br />				balls.push(new Ball(235, 90, 0, 0, dark));<br />				balls.push(new Ball(240, 90, 0, 0, dark));<br />				balls.push(new Ball(245, 85, 0, 0, dark));<br />				balls.push(new Ball(250, 75, 0, 0, dark));<br />				balls.push(new Ball(245, 65, 0, 0, dark));<br />				balls.push(new Ball(235, 55, 0, 0, dark));<br />				balls.push(new Ball(225, 53, 0, 0, dark));<br />				balls.push(new Ball(215, 51, 0, 0, dark));<br />				balls.push(new Ball(200, 51, 0, 0, dark));<br />				balls.push(new Ball(200, 61, 0, 0, dark));<br />				balls.push(new Ball(200, 71, 0, 0, dark));<br />                balls.push(new Ball(200, 81, 0, 0, dark));<br />                balls.push(new Ball(200, 91, 0, 0, dark));<br />                balls.push(new Ball(200, 103, 0, 0, dark));<br />                balls.push(new Ball(200, 116, 0, 0, dark));<br />                balls.push(new Ball(200, 127, 0, 0, dark));<br />                balls.push(new Ball(223, 135, 0, 0, dark));<br />				balls.push(new Ball(210, 135, 0, 0, dark));	<br />				balls.push(new Ball(235, 135, 0, 0, dark));				<br />				balls.push(new Ball(240, 132, 0, 0, dark));				<br />      <br />                // i<br />                var oOffset = 67;<br />				balls.push(new Ball(oOffset + 210, 136, 0, 0, blue));<br />				balls.push(new Ball(oOffset + 210, 133, 0, 0, blue));<br />				balls.push(new Ball(oOffset + 210, 123, 0, 0, blue));<br />				balls.push(new Ball(oOffset + 210, 113, 0, 0, blue));<br />				balls.push(new Ball(oOffset + 210, 108, 0, 0, blue));<br />				balls.push(new Ball(oOffset + 210, 101, 0, 0, blue));<br />				balls.push(new Ball(oOffset + 210, 70, 0, 0, blue));<br /><br />                // n<br />				<br />				balls.push(new Ball(310, 135, 0, 0, red));<br />				balls.push(new Ball(310, 130, 0, 0, red));<br />				balls.push(new Ball(310, 120, 0, 0, red));<br />				balls.push(new Ball(310, 110, 0, 0, red));<br />				balls.push(new Ball(310, 100, 0, 0, red));<br />				balls.push(new Ball(320, 95, 0, 0, red));<br />				balls.push(new Ball(330, 95, 0, 0, red));<br />				balls.push(new Ball(340, 100, 0, 0, red));<br />				balls.push(new Ball(340, 110, 0, 0, red));<br />				balls.push(new Ball(340, 120, 0, 0, red));<br />				balls.push(new Ball(340, 130, 0, 0, red));<br />				balls.push(new Ball(340, 135, 0, 0, red));<br />                <br />                // 1<br />				balls.push(new Ball(368, 135, 0, 0, green));<br />				balls.push(new Ball(374, 135, 0, 0, green));<br />                balls.push(new Ball(382, 135, 0, 0, green));<br />				balls.push(new Ball(374, 129, 0, 0, green));<br />				balls.push(new Ball(374, 119, 0, 0, green));<br />				balls.push(new Ball(374, 109, 0, 0, green));<br />				balls.push(new Ball(374, 99, 0, 0, green));<br />				balls.push(new Ball(374, 89, 0, 0, green));<br />				balls.push(new Ball(365, 94, 0, 0, green));<br /><br /><br />				balls.push(new Ball(470, 89, 0, 0, dark));<br />				balls.push(new Ball(440, 89, 0, 0, dark));<br />				<br />				balls.push(new Ball(430, 115, 0, 0, red));<br />				balls.push(new Ball(435, 119, 0, 0, red));<br />				balls.push(new Ball(440, 125, 0, 0, red));<br />				balls.push(new Ball(450, 129, 0, 0, red));<br />				balls.push(new Ball(460, 129, 0, 0, red));<br />				balls.push(new Ball(470, 125, 0, 0, red));<br />				balls.push(new Ball(475, 119, 0, 0, red));<br />				balls.push(new Ball(480, 114, 0, 0, red));<br />                <br />                return balls;<br />            }<br />            <br />            function getMousePos(canvas, evt){<br />                // get canvas position<br />                var obj = canvas;<br />                var top = 0;<br />                var left = 0;<br />                while (obj.tagName != 'BODY') {<br />                    top += obj.offsetTop;<br />                    left += obj.offsetLeft;<br />                    obj = obj.offsetParent;<br />                }<br />                <br />                // return relative mouse position<br />                var mouseX = evt.clientX - left + window.pageXOffset;<br />                var mouseY = evt.clientY - top + window.pageYOffset;<br />                return {<br />                    x: mouseX,<br />                    y: mouseY<br />                };<br />            }<br />            <br />            function updateBalls(canvas, balls, timeDiff, mousePos){<br />                var context = canvas.getContext(&quot;2d&quot;);<br />                var collisionDamper = 0.3;<br />                var floorFriction = 0.0005 * timeDiff;<br />                var mouseForceMultiplier = 1 * timeDiff;<br />                var restoreForce = 0.002 * timeDiff;<br />                <br />                for (var n = 0; n &lt; balls.length; n++) {<br />                    var ball = balls[n];<br />                    // set ball position based on velocity<br />                    ball.y += ball.vy;<br />                    ball.x += ball.vx;<br />                    <br />                    // restore forces<br />                    if (ball.x &gt; ball.origX) {<br />                        ball.vx -= restoreForce;<br />                    }<br />                    else {<br />                        ball.vx += restoreForce;<br />                    }<br />                    if (ball.y &gt; ball.origY) {<br />                        ball.vy -= restoreForce;<br />                    }<br />                    else {<br />                        ball.vy += restoreForce;<br />                    }<br />                    <br />                    // mouse forces<br />                    var mouseX = mousePos.x;<br />                    var mouseY = mousePos.y;<br />                    <br />                    var distX = ball.x - mouseX;<br />                    var distY = ball.y - mouseY;<br />                    <br />                    var radius = Math.sqrt(Math.pow(distX, 2) +<br />                    Math.pow(distY, 2));<br />                    <br />                    var totalDist = Math.abs(distX) + Math.abs(distY);<br />                    <br />                    var forceX = (Math.abs(distX) / totalDist) *<br />                    (1 / radius) *<br />                    mouseForceMultiplier;<br />                    var forceY = (Math.abs(distY) / totalDist) *<br />                    (1 / radius) *<br />                    mouseForceMultiplier;<br />                    <br />                    if (distX &gt; 0) { // mouse is left of ball<br />                        ball.vx += forceX;<br />                    }<br />                    else {<br />                        ball.vx -= forceX;<br />                    }<br />                    if (distY &gt; 0) { // mouse is on top of ball<br />                        ball.vy += forceY;<br />                    }<br />                    else {<br />                        ball.vy -= forceY;<br />                    }<br />                    <br />                    // floor friction<br />                    if (ball.vx &gt; 0) {<br />                        ball.vx -= floorFriction;<br />                    }<br />                    else if (ball.vx &lt; 0) {<br />                        ball.vx += floorFriction;<br />                    }<br />                    if (ball.vy &gt; 0) {<br />                        ball.vy -= floorFriction;<br />                    }<br />                    else if (ball.vy &lt; 0) {<br />                        ball.vy += floorFriction;<br />                    }<br />                    <br />                    // floor condition<br />                    if (ball.y &gt; (canvas.height - ball.radius)) {<br />                        ball.y = canvas.height - ball.radius - 2;<br />                        ball.vy *= -1;<br />                        ball.vy *= (1 - collisionDamper);<br />                    }<br />                    <br />                    // ceiling condition<br />                    if (ball.y &lt; (ball.radius)) {<br />                        ball.y = ball.radius + 2;<br />                        ball.vy *= -1;<br />                        ball.vy *= (1 - collisionDamper);<br />                    }<br />                    <br />                    // right wall condition<br />                    if (ball.x &gt; (canvas.width - ball.radius)) {<br />                        ball.x = canvas.width - ball.radius - 2;<br />                        ball.vx *= -1;<br />                        ball.vx *= (1 - collisionDamper);<br />                    }<br />                    <br />                    // left wall condition<br />                    if (ball.x &lt; (ball.radius)) {<br />                        ball.x = ball.radius + 2;<br />                        ball.vx *= -1;<br />                        ball.vx *= (1 - collisionDamper);<br />                    }<br />                }<br />            }<br />            <br />            function Ball(x, y, vx, vy, color){<br />                this.x = x;<br />                this.y = y;<br />                this.vx = vx;<br />                this.vy = vy;<br />                this.color = color;<br />                this.origX = x;<br />                this.origY = y;<br />                this.radius = 10;<br />            }<br />            <br />            function animate(canvas, balls, lastTime, mousePos){<br />                var context = canvas.getContext(&quot;2d&quot;);<br />                <br />                // update<br />                var date = new Date();<br />                var time = date.getTime();<br />                var timeDiff = time - lastTime;<br />                updateBalls(canvas, balls, timeDiff, mousePos);<br />                lastTime = time;<br />                <br />                // clear<br />                context.clearRect(0, 0, canvas.width, canvas.height);<br />                <br />                // render<br />                for (var n = 0; n &lt; balls.length; n++) {<br />                    var ball = balls[n];<br />                    context.beginPath();<br />                    context.arc(ball.x, ball.y, ball.radius, 0, 2 * Math.PI, false);<br />                    context.fillStyle = ball.color;<br />                    context.fill();<br />                }<br />                <br />                // request new frame<br />                requestAnimFrame(function(){<br />                    animate(canvas, balls, lastTime, mousePos);<br />                });<br />            }<br />            <br />            window.onload = function(){<br />                var canvas = document.getElementById(&quot;myCanvas&quot;);<br />                var balls = initBalls();<br />                var date = new Date();<br />                var time = date.getTime();<br />                /*<br />                 * set mouse position really far away<br />                 * so the mouse forces are nearly obsolete<br />                 */<br />                var mousePos = {<br />                    x: 9999,<br />                    y: 9999<br />                };<br />                <br />                canvas.addEventListener(&quot;mousemove&quot;, function(evt){<br />                    var pos = getMousePos(canvas, evt);<br />                    mousePos.x = pos.x;<br />                    mousePos.y = pos.y;<br />                });<br />                <br />                canvas.addEventListener(&quot;mouseout&quot;, function(evt){<br />                    mousePos.x = 9999;<br />                    mousePos.y = 9999;<br />                });<br />                <br />                animate(canvas, balls, time, mousePos);<br />            };<br />        &lt;/script&gt;</pre>
+          </div>
+          <div class="dede_pages">
+            <ul class="pagelist">
+             
+            </ul>
+		  </div>
+          <!--end content--> 
+          <!--article weekfirst-->
+          <div class="clearfix">
+            <div class="weekfirst">
+              <h3>浣犲彲鑳藉枩娆㈤槄璇讳互涓嬫枃绔 </h3>
+              <ul> 
+                               </ul>
+                 <h3>銆愯矗浠荤紪杈戯細灏忔兂銆�</h3>
+            </div>
+            <div class="abanner">
+            <!-- 骞垮憡浣嶏細姝ｆ柟褰�2_200x200 -->
+           <script>BAIDU_CLB_fillSlot("220241");</script>
+          </div>
+          </div> 
+          <!--end article weekfirst-->
+          <div id="_mood" class="tp">鏁版嵁缁熻涓紒锛�</div> 
+<script language="JavaScript">mood();</script>
+          <p class="top"><span class="source">涓婁竴绡囷細<a href='http://www.html5china.com/html5GameDevelopment/html5_game_development_20120206_3426.h'>濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙</a> <br />涓嬩竴绡囷細娌℃湁浜� </span><span class="return"><br /><a href="http://www.html5china.com/html5GameDevelopment/" title="杩斿洖HTML5娓告垙寮€鍙�">杩斿洖HTML5娓告垙寮€鍙�</a></span></p>
+        </div>
+        <div class="fx">
+        <!-- JiaThis Button BEGIN -->
+        <div id="ckepop">
+        <span class="jiathis_txt">鍒嗕韩鍒帮細</span>
+        <a class="jiathis_button_qzone">QQ绌洪棿</a>
+        <a class="jiathis_button_tqq">鑵捐寰崥</a>
+        <a class="jiathis_button_tsina">鏂版氮寰崥</a>
+        <a class="jiathis_button_kaixin001">寮€蹇冪綉</a>
+        <a class="jiathis_button_douban">璞嗙摚</a>
+        <a class="jiathis_button_print">鎵撳嵃</a>
+        <a class="jiathis_button_fav">鏀惰棌澶�</a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">鏇村</a>
+        <a class="jiathis_counter_style"></a>
+        </div> 
+        <!-- JiaThis Button END -->
+        </div>
+      </div>
+      <div class="seconddiv">
+        <div class="articlemore">
+          <h3>缂栬緫鎺ㄨ崘鏂囩珷</h3>
+          <div class="morectn">
+            <ul>
+              <li><a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120510_3636.h" title="鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉" target="_blank">鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉</a></li>
+<li><a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120206_3426.h" title="濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙" target="_blank">濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙</a></li>
+
+            </ul>
+            <div class="morectnright">
+              <h4><a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120510_3636.h" title="鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉" target="_blank">鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉</a></h4>
+              <a href='http://www.html5china.com/html5GameDevelopment/html5_game_development_20120510_3636.h' target="_blank" title="鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉" class="imglink"><img src="http://www.html5china.com/uploads/allimg/120510/1_0510235455V05.jpg" width="120" height="77" alt="鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉"/></a>
+              <div>鍦ㄧ嚎婕旂ず 鏈湴涓嬭浇 浠婂ぉ鎴戜滑鍒嗕韩涓€涓潵鑷簬 html5canvastutorials 鐨勮秴閰峰脊璺崇悆鏁堟灉锛岃繖閲屾垜浠娇鐢ㄧ函...</div>
+
+            </div>
+            <div class="clean"></div>
+          </div>
+        </div> 
+        <!-- //涓绘ā鏉垮繀椤昏寮曞叆http://www.html5china.com/include/dedeajax2.js -->
+<a name='postform'></a>
+<div class="comt" id="comt"> 
+          <div class="comttitle">
+            <h3>缃戝弸璇勮<span class="red">TOP10</span></h3>
+            <span class="morecomt"><a href="http://www.html5china.com/plus/feedback.php?aid=3636"  target="_blank" title="鏌ョ湅鎵€鏈夎瘎璁�">鏌ョ湅鎵€鏈夎瘎璁�</a></span> </div>
+             <div id="commetcontentNew"></div>
+             <div id="commetcontentt"></div> 
+          <div class="comtform">
+          <form action="#" method="post" name="feedback">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="3636" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+            <h3>鎴戣璇勮<span>璇疯嚜瑙夐伒瀹堜簰鑱旂綉鐩稿叧鐨勬斂绛栨硶瑙勶紝涓ョ鍙戝竷鑹叉儏銆佹毚鍔涖€佸弽鍔ㄧ殑瑷€璁恒€�</span></h3>
+            <textarea name="msg"></textarea>
+            <p><span class="floatleft">
+                                
+                                楠岃瘉鐮�: <input type="text" name="validate" size="4" class="ipt-txt" style="text-transform:uppercase;"/><img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" width="60" height="24"  title="鐐瑰嚮鎴戞洿鎹㈠浘鐗�" alt="鐐瑰嚮鎴戞洿鎹㈠浘鐗�" />
+                                </span>
+                               <span class="floatright">
+                    <input type="button" onClick="PostComment()" class="button" value=" " />
+              </span>
+               <div class="clean"></div></p>
+             
+              </form>
+          </div>
+        </div>
+        
+<!--
+//鐢变簬璇勮杞藉叆鏃朵娇鐢ㄥ紓姝ヤ紶杈擄紝鍥犳蹇呴』鍦ㄦ渶鍚庝竴姝ュ姞杞斤紙DIGG鍜岃瘎璁烘椤绘斁鍦ㄨ瘎璁哄唴瀹瑰墠闈級
+//濡傛灉涓€瀹氶渶瑕佹彁鍓嶇殑鎶妋yajax.SendGet鏀逛负myajax.SendGet2锛屼絾鍙兘浼氬紩璧烽〉闈㈤樆婊�
+-->
+<script>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontentt');
+		var waithtml = "<div style='line-height:50px'><img src='http://www.html5china.com/images/loadinglit.gif' />璇勮鍔犺浇涓�...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("http://www.html5china.com/plus/feedback_ajax.php?dopost=getlist&aid=3636&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='http://www.html5china.com/images/loadinglit.gif' />姝ｅ湪鍙戦€佷腑...</div>";
+		if(f.msg.value=='')
+		{
+			alert("璇勮鍐呭涓嶈兘涓虹┖锛�");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("璇峰～鍐欓獙璇佺爜锛�");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(f.msg.value.length > 500)
+		{
+			alert("浣犵殑璇勮鏄笉鏄お闀夸簡锛熻濉啓500瀛椾互鍐呯殑璇勮銆�");
+			return;
+		} 
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'utf-8';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '3636');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', f.msg.value);
+		myajax.SendPost2('http://www.html5china.com/plus/feedback_ajax.php');
+		f.msg.value = '';
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "http://www.html5china.com/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+}
+</script><!-- //璇勮鍐呭鍖虹粨鏉� -->  
+        <div class="relate">
+          <div>
+            <h3>鏇村鐩稿叧鏂囩珷</h3>
+            <ul>
+              
+            </ul>
+          </div>
+          <div class="hotarticle">
+            <h3>鏇村鎺ㄨ崘鏂囩珷</h3>
+            <ul>
+              
+            </ul>
+          </div>
+        <p class="clean"></p>
+        </div>
+        <div class="hotsection">
+          <h3>鏍忕洰鐑棬</h3>
+          <ul>
+          <li><a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120510_3636.h" title="鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛�" target="_blank"><img src="http://www.html5china.com/uploads/allimg/120510/1_0510235455V05.jpg" width="105" height="70" alt="鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛�"/></a><br/>
+              <a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120510_3636.h" title="鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛�" target="_blank">鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛�</a> </li>
+<li><a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120206_3426.h" title="濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙" target="_blank"><img src="http://www.html5china.com/uploads/allimg/120206/1A2415a4-0-lp.jpg" width="105" height="70" alt="濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙"/></a><br/>
+              <a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120206_3426.h" title="濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙" target="_blank">濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙</a> </li>
+
+          </ul>
+          <div class="clean"></div>
+        </div>
+        <div class="arttag">
+            鐑棬鏍囩锛氥€€<a href='http://www.html5china.com/plus/search.php?keyword=Html5%E4%B8%8B%E8%BD%BD'>Html5涓嬭浇</a> 銆€<a href='http://www.html5china.com/plus/search.php?keyword=%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7'>寮€鍙戝伐鍏�</a> 銆€<a href='http://www.html5china.com/plus/search.php?keyword=HTML5%E5%B7%A5%E5%85%B7'>HTML5宸ュ叿</a> 銆€<a href='http://www.html5china.com/plus/search.php?keyword=canvas'>canvas</a> 銆€<a href='http://www.html5china.com/plus/search.php?keyword=html5'>html5</a> 銆€<a href='http://www.html5china.com/plus/search.php?keyword=html5%E8%A7%86%E9%A2%91'>html5瑙嗛</a> 銆€<a href='http://www.html5china.com/plus/search.php?keyword=css3'>css3</a> 銆€<a href='http://www.html5china.com/plus/search.php?keyword=HTML5+%E4%B8%8B%E8%BD%BD'>HTML5 涓嬭浇</a> 銆€<a href='http://www.html5china.com/plus/search.php?keyword=%E8%A7%86%E9%A2%91'>瑙嗛</a> 銆€<a href='http://www.html5china.com/plus/search.php?keyword=webgl'>webgl</a>  
+          <div class="clean"></div>
+        </div>
+      </div>
+    </section>
+    <!--aside-->
+    <aside>
+      <div class="firstnews">
+        <div class="top"> 
+           
+          <ul>
+             
+          </ul>
+        </div>
+        <div class="asidebanner">
+        <!-- 骞垮憡浣嶏細姝ｆ柟褰�1_300x250 -->
+       <script>BAIDU_CLB_fillSlot("220240");</script>
+      </div>
+      </div>
+      <div class="hotnews">
+        <h3>鏍忕洰鐑偣</h3>
+        <ul>
+          <li><a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120510_3636.h" title="鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉" target="_blank">鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉</a></li>
+<li><a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120206_3426.h" title="濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙" target="_blank">濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙</a></li>
+        </ul>
+      </div>
+      <div class="hotviedos">
+        <h3>鐑偣瑙嗛鏁欑▼</h3>
+        <div class="viedodemo">
+          <a href='http://www.html5china.com/video/basic/20110924_1958.html' target="_blank" title="HTML5鍏ラ棬瑙嗛鏁欑▼锛氱涓€绔狅紝姒傝"><img src="http://www.html5china.com/uploads/110925/1-1109250025312H.jpg" width="122" height="77" class="viedodemoimage" alt="HTML5鍏ラ棬瑙嗛鏁欑▼锛氱涓€绔狅紝姒傝"/></a>
+          <a href="http://www.html5china.com/video/basic/20110924_1958.html" target="_blank" title="HTML5鍏ラ棬瑙嗛鏁欑▼锛氱涓€绔狅紝姒傝">HTML5鍏ラ棬瑙嗛鏁欑▼锛氱涓€绔狅紝姒傝</a> </div>
+<div class="viedodemo">
+          <a href='http://www.html5china.com/video/basic/20110925_1963.html' target="_blank" title="HTML5鍏ラ棬瑙嗛鏁欑▼锛氱鍏珷锛屽疄渚嬭瑙�"><img src="http://www.html5china.com/uploads/110925/1-110925002FO20.jpg" width="122" height="77" class="viedodemoimage" alt="HTML5鍏ラ棬瑙嗛鏁欑▼锛氱鍏珷锛屽疄渚嬭瑙�"/></a>
+          <a href="http://www.html5china.com/video/basic/20110925_1963.html" target="_blank" title="HTML5鍏ラ棬瑙嗛鏁欑▼锛氱鍏珷锛屽疄渚嬭瑙�">HTML5鍏ラ棬瑙嗛鏁欑▼锛氱鍏珷锛屽疄渚嬭瑙�</a> </div>
+  
+        <div class="clean"></div>
+      </div>
+      <div class="newarticle">
+        <h3>鏈€鏂版枃绔 </h3>
+        <div class="imgnewart">
+          <ul>
+           <li><a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120510_3636.h" target="_blank" title="鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉"><img src="http://www.html5china.com/uploads/allimg/120510/1_0510235455V05.jpg" width="118" height="73" alt="鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉"/></a><br/>
+              <a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120510_3636.h" target="_blank" title="鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉">鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉</a></li>
+<li><a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120206_3426.h" target="_blank" title="濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙"><img src="http://www.html5china.com/uploads/allimg/120206/1A2415a4-0-lp.jpg" width="118" height="73" alt="濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙"/></a><br/>
+              <a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120206_3426.h" target="_blank" title="濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙">濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙</a></li>
+  
+          </ul>
+          <div class="clean"></div>
+        </div>
+        <ul class="asidelist">
+         <li><a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120510_3636.h" target="_blank" title="鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉">鍒嗕韩涓€涓狧TML5鐢诲竷瀹炵幇鐨勮秴閰锋枃瀛楀脊璺崇悆鏁堟灉</a></li>
+<li><a href="http://www.html5china.com/html5GameDevelopment/html5_game_development_20120206_3426.h" target="_blank" title="濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙">濡備綍寮€鍙戜竴涓畝鍗曠殑HTML5 Canvas娓告垙</a></li>
+ 
+        </ul>
+      </div>
+      <div class="asidebook">
+        <h3>鎺ㄨ崘鍥句功</h3>
+        <div class="bookimg"> 
+        <a href='http://www.html5china.com/book/basic/20120115_3348.html' target="_blank" title="HTML5 Canvas鍩虹鏁欑▼"><img src="http://www.html5china.com/uploads/allimg/120115/1-1201150026110-L.jpg" width="100" height="130" alt="HTML5 Canvas鍩虹鏁欑▼"/></a> 
+            <p>
+            <span>涔﹀悕锛�</span><a href='http://www.html5china.com/book/basic/20120115_3348.html' target="_blank" title="HTML5 Canvas鍩虹鏁欑▼">HTML5 Canvas鍩虹鏁欑▼</a><br>
+            <span>鍑虹増绀撅細</span>浜烘皯閭數鍑虹増绀�<br>
+            <span>浣滆€咃細</span><span class="odd">鐩涙捣鑹�</span><br>
+            <span>椤垫暟锛�</span></p>
+
+          <div class="clean"></div>
+        </div>
+        <ul class="asidelist">
+         <li><a href='http://www.html5china.com/book/basic/20120114_3347.html' target="_blank" title="HTML5寮€鍙戠簿瑕佷笌瀹炰緥璇﹁В">HTML5寮€鍙戠簿瑕佷笌瀹炰緥璇﹁В</a></li>
+<li><a href='http://www.html5china.com/book/basic/20120114_3346.html' target="_blank" title="HTML5鍜孋SS3瀹炰緥鏁欑▼">HTML5鍜孋SS3瀹炰緥鏁欑▼</a></li>
+<li><a href='http://www.html5china.com/book/basic/20120114_3345.html' target="_blank" title="HTML5涓嶤SS3瀹炴垬鎸囧崡">HTML5涓嶤SS3瀹炴垬鎸囧崡</a></li>
+<li><a href='http://www.html5china.com/book/basic/20111110_2368.html' target="_blank" title="jQuery寮€鍙戞妧鏈瑙�(鍚獵D鍏夌洏1寮 )">jQuery寮€鍙戞妧鏈瑙�(鍚獵D鍏夌洏1寮 )</a></li>
+
+        </ul>
+      </div>
+      <div class="hottz">
+        <h3>鏈€鐑窡甯�</h3>
+        <ul class="asidelist">
+          <li><a href="http://bbs.html5china.com/thread-5-1-1.html" target="_blank" title="鍥戒汉鍐欑殑寮哄ぇ鐨刪tml5妞嶇墿澶ф垬鍍靛案锛堟簮鐮侊級">鍥戒汉鍐欑殑寮哄ぇ鐨刪tml5妞嶇墿澶ф垬鍍靛案锛堟簮鐮侊級</a></li><li><a href="http://bbs.html5china.com/thread-8-1-1.html" target="_blank" title="鑰佸鍐欑殑3D鏃嬭浆鐨勪笉鍙€濊鐨勪縿缃楁柉鏂瑰潡(婧愮爜)">鑰佸鍐欑殑3D鏃嬭浆鐨勪笉鍙€濊鐨勪縿缃楁柉鏂瑰潡(婧愮爜)</a></li><li><a href="http://bbs.html5china.com/thread-417-1-1.html" target="_blank" title="HTML5寮€鍙戠殑澶槼绯绘紨绀猴紒婧愮爜涓嬭浇锛�">HTML5寮€鍙戠殑澶槼绯绘紨绀猴紒婧愮爜涓嬭浇锛�</a></li><li><a href="http://bbs.html5china.com/thread-433-1-1.html" target="_blank" title="html5浠庡叆闂ㄥ埌绮鹃€�">html5浠庡叆闂ㄥ埌绮鹃€�</a></li><li><a href="http://bbs.html5china.com/thread-2-1-1.html" target="_blank" title="涓€姝ヤ竴姝ュ鍋欻TML5娓告垙鏁欑▼璁ㄨ">涓€姝ヤ竴姝ュ鍋欻TML5娓告垙鏁欑▼璁ㄨ</a></li><li><a href="http://bbs.html5china.com/thread-11-1-1.html" target="_blank" title="寰峰窞21鐐规墤鍏嬬墝锛堟簮鐮侊紝閫傚悎鐢ㄦ潵瀛︿範锛�">寰峰窞21鐐规墤鍏嬬墝锛堟簮鐮侊紝閫傚悎鐢ㄦ潵瀛︿範锛�</a></li><li><a href="http://bbs.html5china.com/thread-9-1-1.html" target="_blank" title="鎾炴挒鐞冿紙婧愮爜锛�">鎾炴挒鐞冿紙婧愮爜锛�</a></li><li><a href="http://bbs.html5china.com/thread-15-1-1.html" target="_blank" title="鏇茬嚎璋滃洟(缁忓吀娓告垙锛岀粡鍏告簮鐮�)">鏇茬嚎璋滃洟(缁忓吀娓告垙锛岀粡鍏告簮鐮�)</a></li>  
+        </ul>
+      </div> 
+    </aside>
+    <!--end aside-->   
+    <div class="clean"></div> 
+</article>
+<script src="http://v2.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<script>LoadCommets(1);</script>
+<!--footer-->
+<footer>
+  <ul>
+    <li><a href="/help/about.html" target="_blank" title="鍏充簬鎴戜滑">鍏充簬鎴戜滑</a>|</li>
+    <li><a href="/help/adservice.html" target="_blank" title="骞垮憡鏈嶅姟">骞垮憡鏈嶅姟</a>|</li>
+    <li><a href="/plus/flink.php" target="_blank" title="鍙嬫儏閾炬帴">鍙嬫儏閾炬帴</a>|</li>
+    <li><a href="/sitemap.html" target="_blank" title="缃戠珯鍦板浘">缃戠珯鍦板浘</a>|</li>
+    <li><a href="http://bbs.html5china.com" target="_blank" title="HTML5涓枃璁哄潧">HTML5涓枃璁哄潧</a></li>
+  </ul>
+  <section class="copyright">Copyright &copy;  2010-2011 <a href="http://www.html5china.com" title="HTML5涓枃缃�">HTML5涓枃缃�</a> 鐗堟潈鎵€鏈� 绮CP澶�10202793鍙�-1 <br>
+      Powered by <a href="/help/about.html" target="_blank" title="html5China Team">html5China Team</a> 鍚堜綔鑱旂郴QQ 1294899260  <script src="http://s15.cnzz.com/stat.php?id=2297124&web_id=2297124"></script></section>
+</footer>
+<script src="http://www.html5china.com/templets/html5/scripts/ads.js"></script>
+<!--end footer--> 
+</body>
+</html>
