@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jsDemo01</title>
+	<style type="text/css">
+	      div{width: 400px; height: 400px; background: #f90;
+		}
+
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="http://img04.taobaocdn.com/imgextra/i4/420567757/TB2PTXDapXXXXaoXXXXXXXXXXXX-420567757.jpg" onclick="showPic(this);return false;">aa</a></li>
+		<li><a href="http://gtms03.alicdn.com/tps/i3/TB1HUr1GFXXXXaaXVXX6Cwu2XXX-398-510.jpg_q75.jpg"onclick="showPic(this);return false;">bb</a></li>
+		<li><a href="http://img01.taobaocdn.com/imgextra/i1/1902387885/TB24t2daVXXXXchXXXXXXXXXXXX_!!1902387885.jpg_q75.jpg" onclick="showPic(this);return false;">cc</a></li>
+		<li><a href="http://gtms04.alicdn.com/tps/i4/TB1bG24GFXXXXa2XXXXz87X2XXX-398-332.jpg_q75.jpg" onclick="showPic(this);return false;">dd</a></li>
+		<img src=""  id="placeholder" />
+
+	</ul>
+	<!-- 2014/11/3 -->
+<script type="text/javascript">
+	// var contatiner=document.getElementsByClassName("contatiner")[0];
+	// var title=contatiner.getAttribute("title");
+	// title.setAttribute("title","nihao");
+	// alert(title);
+	// alert(contatiner);
+	function showPic(){
+		var source=document.getElementById("href");
+		var placeholder=document.getElementById("placeholder");
+		placeholder.setAttribute("src",source);
+	}
+
+
+</script>
+</body>
+</html>

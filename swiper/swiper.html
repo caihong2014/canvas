@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scolling demo</title>
+	<link rel="stylesheet" type="text/css" href="idangerous.swiper.css">
+</head>
+<body>
+<div class="swiper-container">
+   <div class="swiper-wrapper">
+       <!--First Slide-->
+       <div class="swiper-slide tap1"> 
+			   <p>1</p>
+       </div>      
+
+      <!--Second Slide-->
+
+      <div class="swiper-slide tap2">
+		    <p>2</p>
+       
+
+      </div> 
+
+      <!--Third Slide-->
+
+      <div class="swiper-slide tap3"> 
+		    <p>3</p>
+    
+      </div>
+      <div class="swiper-slide tap4"> 
+        <p>4</p>
+    
+      </div>
+      <div class="swiper-slide tap5"> 
+        <p>5</p>
+    
+      </div>
+      <div class="swiper-slide tap6"> 
+        <p>6</p>
+    
+      </div>
+      <div class="swiper-slide tap7"> 
+        <p>7</p>
+    
+      </div>
+      <div class="swiper-slide tap8"> 
+        <p>8</p>
+    
+      </div>
+      <div class="swiper-slide tap9"> 
+        <p>9</p>
+    
+      </div>
+              
+    </div>
+
+</div>
+  <script type="text/javascript" src="http://fed.pimg.cn/js/gallery/require-zepto.js"></script>
+ <script type="text/javascript">
+
+ window.onload = function() {
+   var mySwiper = new Swiper('.swiper-container',{
+  
+     mode:'vertical',
+     loop: false ,
+     speed: 300
+    
+     
+   }); 
+   $(".swiper-slide p").fadeToggle(6000);
+
+ }
+ 
+ </script>
+<script type="text/javascript" src="idangerous.swiper.min.js"></script>	
+</body>
+</html>
