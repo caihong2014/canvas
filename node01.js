@@ -17,9 +17,10 @@ var mkdirp = require('mkdirp');
 //目标网址
 // var x=5;
 var url = 'http://me2-sex.lofter.com/tag/美女摄影?page=8';
+// var url="http://huaban.com/explore/yinghua/";
 // setInterval(function(){return x++;},10000);
 //本地存储目录
-var dir = './images';
+var dir = './huabanimages';
 //创建目录
 mkdirp(dir, function(err) {
 if(err){
