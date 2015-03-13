@@ -3,8 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>h5_text</title>
+
+<style type="text/css">
+	body{background: #000;}
+</style>
 </head>
 <body>
-	
+<script type="text/javascript" src="moudle/zepto.min.js"></script>	
+<script type="text/javascript">
+	;(function(window,$){
+		$(document).on("tap",function(){
+			$("body").css("background",	"#"+randomColor());
+		})
+	function randomColor(){  
+	    var rand = Math.floor(Math.random( ) * 0xFFFFFF).toString(16);  
+		    if(rand.length == 6){  
+		        return rand;  
+		    }else{  
+		        return randomColor();  
+		    }  
+		}    
+	})(window,Zepto)
+</script>
 </body>
 </html>
