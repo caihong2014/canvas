@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	html{font-family: "微软雅黑"; font-size: 12px;}
+    	body{background: #f3f3f3;}
+    	.mui-bar-nav{background: #f8749d; color:#fff;}	
+	    .mui-bar-nav a{color:#fff;}
+	    .mui-title{color: #fff; }
+	    .price{height: 60px; background: #fff; position: relative;}
+	    .price p{position: absolute; font-size: 12px; color: #F8749D;}
+	    .price p.p{top:10px;left:20px; font-size:16px;  font-weight: bold;}
+	    .price p.y{top:30px; left: 20px; font-size: 11px;}
+	    .price p.u{top:20px; right:20px; font-size: 11px;}
+	    .header-img{display: block;}
+	    .tips{padding:14px 10px; height: 76px; background: #fff; border-top:1px solid #eee; border-bottom: 1px solid #eee;}
+	    .tips p{font-size: 12px; line-height: 10px;}
+	    .tips2{margin-left: 36px;}
+	    .workman{padding-left:10px; border-bottom:1px solid #eee; color: #404040; position: relative; background: #fff;}
+		.workman li{list-style: none; }
+		.workman li.image{float:left; width: 71px; padding-bottom: 10px;}
+		.workman li.msg{float:left; margin-left: 10px; line-height: 18px; }
+		.workman li.msg p{color: #404040;}
+		.workman li.image span{margin-left:14px; text-align: center;  font-size: 14px;}
+		.workman li.distance{float:right; font-size: 12px; position: absolute; bottom:10px; right:20px;}
+		.mui-btn-danger{margin-left:5%; width:90%; background: #ff687b; height: 44px; line-height: 16px;}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav mui-clearfix">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="main.html"></a>
+	    <h1 class="mui-title">好手艺</h1>
+	</header>
+	<img src="images/product.png" alt="" title="" width="100%" class="header-img"/>
+	<div class="price">
+		<p class="p">￥456</p>
+		<p class="y">预付款100</p>
+		<p class="u">21人用过</p>
+	</div>
+	<div class="tips">
+		<p>效果：发质不干，水润光滑</p>
+		<p>提示：1，预付款10元，门店消费后支付58元</p>
+		<p class="tips2">2，提前三个小时预约</p>
+	</div>
+	<ul class="workman mui-clearfix">
+		<li class="image">
+			<img src="images/test.png" alt="头像" title="头像" width="100%"/><br />
+			<span>李泽旭</span>
+		</li>
+		<li class="msg">
+			<p>强项：剪短发</p>
+			<p>剪发价格：￥68</p>
+			<p>解单数：50</p>
+		</li>
+		<li class="distance">
+			中关村附近
+		</li>
+	</ul>
+	<button class="mui-btn mui-btn-danger mui-btn-block">下单</button>
+</body>
+</html>

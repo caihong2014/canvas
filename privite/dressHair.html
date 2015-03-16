@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <!--<script src="js/app.js"></script>-->
+    <link href="css/mui.min.css" rel="stylesheet"/>
+  
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    .mui-bar-nav{background: #f8749d; color:#fff;}	
+    .mui-bar-nav a{color:#fff;}
+    .mui-title{color: #fff;}
+    nav{margin-top:46px; height: 40px; line-height: 40px; text-align: center; background: #fff; border-bottom: 1px solid #eee;}
+	nav span{display: inline-block; width: 44%; color: #575757;}
+	.active{border-bottom:1px solid #fc7d92; color: #FC7D92;}
+	.workman{display:none; border-bottom:1px solid #eee; color: #404040; position: relative;}
+	.workman li{list-style: none; }
+	.workman a{color: #404040;}
+	.shorthair_tab{display: block;}
+	.workman li.image{float:left; width: 71px; padding-bottom: 10px;}
+	.workman li.msg{float:left; margin-left: 10px; line-height: 18px; }
+	.workman li.msg p{color: #404040;}
+	.workman li.image span{margin-left:14px; text-align: center;  font-size: 14px;}
+	.workman li.distance{float:right; font-size: 12px; position: absolute; bottom:10px; right:20px;}
+	.mui-bar{}
+	
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="main.html"></a>
+	    <h1 class="mui-title">好手艺</h1>
+	</header>
+	<nav>
+		<span class="shorthair active">剪短发</span>
+		<span class="longhair">剪长发</span>
+	</nav>
+	<ul class="workman shorthair_tab mui-clearfix">
+		<a href="goods1.html" style="display:block; height:100px;">
+		<li class="image">
+			<img src="images/test.png" alt="头像" title="头像" width="100%"/><br />
+			<span>短发哥</span>
+		</li>
+		<li class="msg">
+			<p>强项：剪短发</p>
+			<p>剪发价格：￥68</p>
+			<p>解单数：50</p>
+		</li>
+		<li class="distance">
+			中关村附近
+		</li>
+		</a>
+	</ul>
+	<ul class="workman longhair_tab mui-clearfix">
+		<a href="goods1.html" style="display:block; height:100px;">
+		<li class="image">
+			<img src="images/test.png" alt="头像" title="头像" width="100%"/><br />
+			<span>长发哥</span>
+		</li>
+		<li class="msg">
+			<p>强项：剪长发</p>
+			<p>剪发价格：￥68</p>
+			<p>解单数：50</p>
+		</li>
+		<li class="distance">
+			中关村附近
+		</li>
+		</a>
+	</ul>
+	
+<script type="text/javascript" src="js/zepto.min.js" ></script>
+<script type="text/javascript">
+	$(function(){
+		
+		$("nav span").on("click",function(){
+			$(this).parent().find("span").removeClass("active");
+			$(this).addClass("active");
+			if($(this).parent().find(".longhair").hasClass("active")){
+				$(this).parent().next().hide();
+				$(this).parent().next().next().show();
+			}else{
+				$(this).parent().next().next().hide();
+				$(this).parent().next().show();
+			}
+		})
+	
+	})
+</script>	
+
+</body>
+</html>

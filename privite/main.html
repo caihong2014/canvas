@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script src="js/mui.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+     <style type="text/css">
+    	html{font-family: "微软雅黑"; font-size: 12px;}
+    	header{padding:0 10px; height: 46px; line-height: 46px; background: #f8749d; color: #fff; text-align: center; vertical-align: middle;}
+    	.place{float:left; vertical-align: middle; font-size:12px;}
+    	.place a,.contact a{color: #fff;}
+    	.title{margin-right: 20px;}
+    	.contact{float:right; }
+    	.mui-slider{height: 2%; overflow: hidden;}
+    	.mui-icon-arrowdown{font-size: 1.2rem;}
+    	#slider{height: 160px;}
+		.mui-btn-block{display: inline-block; float:left; margin:6px 0 0 1.4%; width: 48%; color: #fff;}
+		.mui-btn p{margin:0 auto; width:30%; }
+		.mui-btn-b1{ height: 240px; background: #918eff;}
+		.mui-btn-b2{ height: 118px; background: #bade8e;}
+		.mui-btn-b3{ height: 116px; background: #ffa39c;}
+		.mui-btn-b4{ height: 110px; background: #82cee8;}
+		.mui-btn-b5{ height: 110px; background: #f7d57a;}
+		.main-content{margin-bottom: 50px;}
+		.mui-bar-tab a{display:inline-block; width:25%; color:#929292; font-size: 11px; text-align: center;}
+		.mui-tab-label{display:block; margin-top: -12px;}
+
+    </style>
+</head>
+<body>
+	<header class="mui-clearfix">
+		<span class="place">北京市<a><span class="mui-icon mui-icon-arrowdown"></span></a></span>
+	    <span class="title">好手艺</span>  
+	    <span class="contact"><a id="icon-phone"><span class="mui-icon mui-icon-phone"></span></a></span>
+	</header>	
+	<div id="slider" class="mui-slider">
+		<div class="mui-slider-group mui-slider-loop">
+			<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+			<div class="mui-slider-item mui-slider-item-duplicate">
+				<a href="#">
+					<img src="images/yuantiao.jpg" width="100%">
+				</a>
+			</div>
+			<!-- 第一张 -->
+			<div class="mui-slider-item">
+				<a href="#">
+					<img src="images/shuijiao.jpg" width="100%">
+				</a>
+			</div>
+			<!-- 第二张 -->
+			<div class="mui-slider-item">
+				<a href="#">
+					<img src="images/muwu.jpg" width="100%">
+				</a>
+			</div>
+			<!-- 第三张 -->
+			<div class="mui-slider-item">
+				<a href="#">
+					<img src="images/cbd.jpg" width="100%">
+				</a>
+			</div>
+			<!-- 第四张 -->
+			<div class="mui-slider-item">
+				<a href="#">
+					<img src="images/yuantiao.jpg" width="100%">
+				</a>
+			</div>
+			<!-- 第五张 -->
+			<div class="mui-slider-item">
+				<a href="#">
+					<img src="images/cbd.jpg" width="100%">
+				</a>
+			</div>
+			<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+			<div class="mui-slider-item mui-slider-item-duplicate">
+				<a href="#">
+					<img src="images/shuijiao.jpg" width="100%">
+				</a>
+			</div>
+		</div>
+		<div class="mui-slider-indicator">
+			<div class="mui-indicator mui-active"></div>
+			<div class="mui-indicator"></div>
+			<div class="mui-indicator"></div>
+			<div class="mui-indicator"></div>
+			<div class="mui-indicator"></div>
+		</div>
+	</div>
+	<div class="main-content mui-clearfix">
+		<button class="mui-btn mui-btn-b1 mui-btn-block">
+			<p><img src="images/4.png" alt="" title="" width="100%"/> </p>剪发</button>
+		<button class="mui-btn mui-btn-b2 mui-btn-block">
+			<p><img src="images/2.png" alt="" title="" width="100%"/></p>染发</button>
+		<button class="mui-btn mui-btn-b3 mui-btn-block">
+			<p><img src="images/3.png" alt="" title="" width="100%"/></p>接发</button>
+		<button class="mui-btn mui-btn-b4 mui-btn-block">
+			<p><img src="images/1.png" alt="" title="" width="100%"/></p>烫发</button>
+		<button class="mui-btn mui-btn-b5 mui-btn-block">
+			<p><img src="images/5.png" alt="" title="" width="100%"/></p>造型</button>
+		
+	</div>
+	<nav class="mui-bar mui-bar-tab" >
+		<a  class="mui-tab-item1" href="main.html">
+			<span class="mui-icon mui-icon-home"></span><br >
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item1" href="myOrders.html">
+			<span class="mui-icon mui-icon-compose"></span>
+			<span class="mui-tab-label">订单</span>
+		</a>
+		<a class="mui-tab-item1" href="aboutme.html">
+			<span class="mui-icon mui-icon-contact"></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+		<a class="mui-tab-item1" href="more.html">
+			<span class="mui-icon mui-icon-more"></span>
+			<span class="mui-tab-label">更多</span>
+		</a>
+	</nav>
+<script src="js/zepto.min.js"></script>	
+<script type="text/javascript">
+	$(function(){
+		var MUI={};
+		MUI.init=function(){
+		    var slider = mui("#slider");
+			  slider.slider({
+					interval: 5000
+			});
+		}
+		MUI.init();
+	}) 	
+</script>
+</body>
+</html>

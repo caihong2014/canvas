@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    body{background: #eff1e4;}
+    .mui-bar-nav{background: #f8749d; color:#fff;}	
+    .mui-bar-nav a{color:#fff;}
+    .mui-title{color: #fff;}
+    .workman{margin-top:50px; border-bottom:1px solid #eee; color: #404040; position: relative; background: #fff;}
+	.workman li{list-style: none; }
+	.workman li.image{float:left; width: 71px; padding-bottom: 10px;}
+	.workman li.msg{float:left; margin-left: 10px; line-height: 18px; }
+	.workman li.msg p{color: #404040;}
+	.workman li.image span{margin-left:14px; text-align: center;  font-size: 14px;}
+	.workman li.distance{float:right; font-size: 12px; position: absolute; bottom:10px; right:20px;}
+	.assess{margin:-17px 0; padding:0; border-bottom: 1px solid #eee; height: 40px; line-height: 40px;  background: #fff;}
+	.assess li{float:left; list-style: none; font-size: 12px; width: 33%; text-align: center;}
+	.assess li.spc{border-left:1px solid #eee; border-right:1px solid #eee;}
+	.tips{padding:0;  background: #fff;}
+	.content{padding:0; background: #fff; height: 200px;}
+	.content li{float:left;margin:10px 0 0 4%; height: 170px; width: 44%; border:1px solid #eee; list-style: none; overflow: hidden;}
+	.content li img{display: block; height: 130px;}
+	.content li p{margin-top:4px; font-size: 12px; line-height: 10px;}
+	.content li p span.used,span.mon{margin-right:4px; font-size:10px; color: #e3bfa5; float: right;}
+	.content li p span.price{color: #d5879d;}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="goods1.html"></a>
+	    <h1 class="mui-title">好手艺</h1>
+	</header>
+	<ul class="workman mui-clearfix">
+		<li class="image">
+			<a href="goods1.html"><img src="images/test.png" alt="头像" title="头像" width="100%"/></a><br />
+			<span>李泽旭</span>
+		</li>
+		<li class="msg">
+			<p>强项：剪短发</p>
+			<p>剪发价格：￥68</p>
+			<p>解单数：50</p>
+		</li>
+		<li class="distance">
+			中关村附近
+		</li>
+	</ul>
+	<ul class="assess mui-clearfix">
+		<li>责任心：<span>5.0</span></li>	
+		<li class="spc">精细度：<span>5.0</span></li>	
+		<li>服务态度：<span>5.0</span></li>	
+	</ul>
+	<ul class="tips">
+		<li class="mui-table-view-cell aboutus">
+			<a class="mui-navigate-right" href="javascript:;">
+						剪发作品
+			</a>
+		</li>
+		<li class="mui-table-view-cell aboutus">
+			<a class="mui-navigate-right" href="assess.html">
+						顾客评价(100)
+			</a>
+		</li>
+	</ul>
+	<ul class="content mui-clearfix">
+		<li>
+			<img src="images/product.png" alt="" title="" width="100%"/>
+			<p class="mui-clearfix"><span class="tit">60厘米 80克</span><span class="used">21人用过</span></p>
+			<p class="mui-clearfix"><span class="price">￥1200.00</span><span class="mon">预付款200</span></p>
+		</li>
+		<li>
+			<img src="images/product.png" alt="" title="" width="100%"/>
+			<p class="mui-clearfix"><span class="tit">60厘米 80克</span><span class="used">21人用过</span></p>
+			<p class="mui-clearfix"><span class="price">￥1200.00</span><span class="mon">预付款200</span></p>
+		</li>
+	</ul>
+	
+</body>
+</html>

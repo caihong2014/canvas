@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>招聘手艺人</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+     <style type="text/css">
+        body{font-size:14px; color: #666; background: #f3f3f3;}
+        .form-data{margin-top: 52px; }
+	    .mui-bar-nav{display:block; background: #f8749d; color:#fff;}	
+	    .mui-bar-nav a{color:#fff;}
+	    .mui-title{color: #fff;}
+	    .mui-input-row{margin:10px auto; border:1px solid #d7d7d7; width: 96%; border-radius: 3px; line-height: 40px;}
+
+	    .mui-input-group .mui-input-row:after,.mui-input-group:before{ background-color: #f3f3f3;}
+	    .mui-input-group{display:block; padding-bottom: 40px;}
+	    .mui-input-row label{text-align: left; width: 10%; float:none;}
+	    .q1,.q2{margin-left: 15px;}
+	    input[type="radio"],input[type="checkbox"]{margin-left: 15px;}
+	    input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: #c9c9c9; font-size: 14px;}
+	    .mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea{width: 70%;}
+	    .checktip{display:block; margin-top: 10px;}
+	    .mui-btn-danger{margin:10px auto; background: #f75e8d; border:none; height: 40px; line-height: 10px; width: 96%;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="more.html"></a>
+	    <h1 class="mui-title">招聘手艺人</h1>
+	</header>
+	<div class="form-data">
+		<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>所在城市:</label>
+					<input type="text" placeholder="北京">
+				</div>
+				<div class="mui-input-row">
+					<label>姓名:</label>
+					<input type="text" placeholder="输入姓名">
+				</div>
+				<div class="mui-input-row">
+					<label>电话:</label>
+					<input type="text" placeholder="输入电话">
+				</div>
+				<div class="mui-input-row">
+					<label>工作年限:</label>
+					<input type="text" placeholder="输入工作年限">
+				</div>
+				
+				<p class="q1">是否有开店经验?</p>
+				<input type="radio" name="yes" />
+				<label>是</label>
+				<input type="radio" name="yes" />
+				<label>否</label>
+				<div class="mui-input-row">
+					<label>期望薪资:</label>
+					<input type="text" placeholder="输入期望薪资">
+				</div>
+				
+				<p class="q2">最看重公司哪些方面?</p>
+				<label class="checktip"><input type="checkbox" />时间自由</label>
+				<label class="checktip"><input type="checkbox" />赚钱多</label>
+				<label class="checktip"><input type="checkbox" />未来有奔头</label>
+				
+		</form>
+	</div>
+	<button class="mui-btn mui-btn-danger mui-btn-block">确定</button>
+</body>
+</html>

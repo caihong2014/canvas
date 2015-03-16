@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>优惠券</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	html{font-family: "微软雅黑"; font-size: 12px;}
+    	body{background: #f3f3f3;}
+    	 .mui-bar-nav{background: #f8749d; color:#fff;}	
+	    .mui-bar-nav a{color:#fff;}
+	    .mui-title{color: #fff;}
+	    .change{text-align: right;}
+	    nav{margin-top:46px; height: 40px; line-height: 40px; text-align: center; background: #fff;}
+	    nav span{display: inline-block; width: 44%; color: #575757;}
+	    .active{border-bottom:1px solid #fc7d92; color: #FC7D92;}
+	    .discount{margin:12px auto;  width: 88%; height: 100px; background: #fff;}
+	    .left{float:left;}
+	    .right{float: right; margin: 12px 10px 0 0;}
+	    .left{padding:26px 13px; width: 68%; background: #5ccce4; height: 100px; color: #fff;}
+	    .left p{color: #fff;}
+	    .left p.t1{font-size: 22px; font-weight: bold;}
+	    .right p{line-height: 10px; text-align: center;}
+	    .right{width:26%; height: 100px;}
+	    
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="main.html"></a>
+	    <h1 class="mui-title">我的优惠券 </h1>
+	    <a class="mui-title change">兑换</a>
+	</header>
+	<nav>
+		<span class="active">未使用</span>
+		<span>已失效</span>
+	</nav>
+	<div class="discount mui-clearfix">
+		<div class="left">
+			<p class="t1">新手特权优惠券</p>
+			<p class="t2">39.9购买新手礼奖品</p>
+		</div>	
+		<div class="right">
+			<p class="t3">使用期限</p>	
+			<p>2015/03/04</p>	
+			<p>~</p>	
+			<p>2015/03/11</p>	
+		</div>
+	</div>
+</body>
+</html>

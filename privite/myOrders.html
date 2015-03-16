@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>订单</title>
+    <!--<script src="js/mui.min.js"></script>-->
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	body,.mui-content,.mui-table-view-cell{background: #efeff4;}
+    	.mui-content{margin:0;}
+    	.mui-bar-nav{display:block; background: #f8749d; color:#fff;}	
+    	.mui-bar-nav h1{color: #fff;}
+    	.mui-bar-nav a{color:#fff;}
+    	nav.n1{margin-top:46px; height: 40px; line-height: 40px; text-align: center; background: #fff;}
+	    nav.n1 span{display: inline-block; width: 32%; color: #575757;}
+	    .active{border-bottom:1px solid #fc7d92; color: #FC7D92;}
+	    .main-content{margin-top:14px; height: 188px; background: #fff; border-bottom: 1px solid #F5DBE4;}
+	    .main-content p.title{padding:0 10px; height: 40px; line-height: 40px; background: #fff; border-bottom: 1px solid #f1f1f1;}
+	    .main-content p.title span.condition{float: right; color: #f87ea3;}
+	    .product-msg{border-bottom: 1px solid #e5e5e5;}
+	    .product-msg li{list-style: none; float:left;}
+	    .img-blank{margin-right:20px; width:50px; height: 50px; }
+	    .submit a{display: inline-block; margin-right: 10px; float:right; border-radius: 5px; border:1px solid #f5dbe4; width: 80px; text-align: center; color: #606060; height: 30px; line-height: 30px;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		 <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="main.html"></a>
+	    <h1 class="mui-title">我的订单</h1>
+	</header>
+	<nav class="n1">
+		<span class="active">全部</span>
+		<span>进行中</span>
+		<span>待评价</span>
+	</nav>
+	<div class="main-content">
+		<p class="title mui-clearfix"><span class="buyer">收货人:李泽超</span><span class="condition">待付款</span></p>
+		<ul class="product-msg mui-clearfix">
+			<li class="img-blank">
+				<img src="images/test.png" alt="此处放图片"  width="100%"/>
+			</li>
+			<li>
+				<p>产品:欧莱雅</p>
+				<p>价格：￥368</p>
+			</li>
+		</ul>
+		<p class="submit mui-clearfix">
+			<a href="javascript:;">去支付</a>
+			<a href="javascript:;">取消订单</a>
+		
+		</p>
+	</div>
+	<div class="main-content">
+		<p class="title mui-clearfix"><span class="buyer">收货人:李泽超</span><span class="condition">待付款</span></p>
+		<ul class="product-msg mui-clearfix">
+			<li class="img-blank">
+				<img src="images/test.png" alt="此处放图片"  width="100%"/>
+			</li>
+			<li>
+				<p>产品:欧莱雅</p>
+				<p>价格：￥368</p>
+			</li>
+		</ul>
+		<p class="submit mui-clearfix">
+			<a href="javascript:;">去支付</a>
+			<a href="javascript:;">取消订单</a>
+		
+		</p>
+	</div>
+	<nav class="mui-bar mui-bar-tab">
+		<a  class="mui-tab-item" href="main.html">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="myOrders.html">
+			<span class="mui-icon mui-icon-compose"></span>
+			<span class="mui-tab-label">订单</span>
+		</a>
+		<a class="mui-tab-item" href="aboutme.html">
+			<span class="mui-icon mui-icon-contact"></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+		<a class="mui-tab-item" href="more.html">
+			<span class="mui-icon mui-icon-more"></span>
+			<span class="mui-tab-label">更多</span>
+		</a>
+	</nav>
+</body>
+</html>

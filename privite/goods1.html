@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    body{background: #eff1e4;}
+    .mui-bar-nav{background: #f8749d; color:#fff;}	
+    .mui-bar-nav a{color:#fff;}
+    .mui-title{color: #fff;}
+    .workman{margin-top:50px; border-bottom:1px solid #eee; color: #404040; position: relative; background: #fff;}
+	.workman li{list-style: none; }
+	.workman li.image{float:left; width: 71px; padding-bottom: 10px;}
+	.workman li.msg{float:left; margin-left: 10px; line-height: 18px; }
+	.workman li.msg p{color: #404040;}
+	.workman li.image span{margin-left:14px; text-align: center;  font-size: 14px;}
+	.workman li.distance{float:right; font-size: 12px; position: absolute; bottom:10px; right:20px;}
+	.assess{margin:-17px 0; padding:0; border-bottom: 1px solid #eee; height: 40px; line-height: 40px;  background: #fff;}
+	.assess li{float:left; list-style: none; font-size: 12px; width: 33%; text-align: center;}
+	.assess li.spc{border-left:1px solid #eee; border-right:1px solid #eee;}
+	.tips{padding:0;  background: #fff;}
+	.content{ background: #fff; height: 200px;}
+	.title{margin:0 0 0 10px; height: 40px; line-height: 40px;}
+	.main-tips{padding-left: 10px;}
+	.main-tips p.a1{margin-left: 30px;}
+	.mui-btn-danger{margin:10px auto; background: #f75e8d; border:none; height: 40px; line-height: 10px; width: 96%;}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="dressHair.html"></a>
+	    <h1 class="mui-title">好手艺</h1>
+	</header>
+	<ul class="workman mui-clearfix">
+		<li class="image">
+			<img src="images/test.png" alt="头像" title="头像" width="100%"/><br />
+			<span>李泽旭</span>
+		</li>
+		<li class="msg">
+			<p>强项：剪短发</p>
+			<p>剪发价格：￥68</p>
+			<p>解单数：50</p>
+		</li>
+		<li class="distance">
+			中关村附近
+		</li>
+	</ul>
+	<ul class="assess mui-clearfix">
+		<li>责任心：<span>5.0</span></li>	
+		<li class="spc">精细度：<span>5.0</span></li>	
+		<li>服务态度：<span>5.0</span></li>	
+	</ul>
+	<ul class="tips">
+		<li class="mui-table-view-cell aboutus">
+			<a class="mui-navigate-right" href="javascript:;">
+						剪发作品
+			</a>
+		</li>
+		<li class="mui-table-view-cell aboutus">
+			<a class="mui-navigate-right" href="assess.html">
+						顾客评价(100)
+			</a>
+		</li>
+	</ul>
+	<div class="content">
+		<p class="title">服务范围:<span>洗发+盘发</span></p>
+		<div class="main-tips">
+			<p>提示</p>
+			<p class="a1">1,预付款10元,到柜台后需要支付商家58元</p>
+			<p class="a1">2,提前三个小时预约</p>
+		</div>
+	</div>
+	<button class="mui-btn mui-btn-danger mui-btn-block">找TA</button>
+</body>
+</html>

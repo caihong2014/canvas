@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	html{font-family: "微软雅黑"; font-size: 12px;}
+    	body{background: #f3f3f3;}
+    	.mui-bar-nav{background: #f8749d; color:#fff;}	
+	    .mui-bar-nav a{color:#fff;}
+	    .mui-title{color: #fff; }
+	    .worker{margin-top:44px; margin-bottom:0; padding-left:10px; height: 40px; line-height: 40px; background: #fff;}
+	    .product-msg{margin:0; padding:10px 5px 0; border-bottom: 1px solid #eee; border-top:1px solid #eee; background: #fff;}
+	    .product-msg li{list-style: none; float:left;}
+	    .product-msg li p{font-size: 12px;}
+	    .img-blank{margin-right:20px; width:50px; height: 50px; }
+
+		.mui-table-view-cell{margin-left:-40px; background: #fff; font-size:14px; font-weight: 400;}
+		.price{padding-top:30px; height: 120px; background: #fff; text-align: center;}
+		.price p.t1{color: #f8749d; font-size:20px;}
+		.price p.t2{color: #F8749D; font-size:12px;}
+		input.telphone{margin-left:5%; width:90%;}
+		.button{margin-top:16px; padding-top:20px; background: #fff;}
+		.mui-btn-danger{margin-left:5%; width:90%; background: #ff687b; height: 44px; line-height: 16px;}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav mui-clearfix">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="main.html"></a>
+	    <h1 class="mui-title">好手艺</h1>
+	</header>
+	<p class="worker">发哥:李泽旭</p>
+	<ul class="product-msg mui-clearfix">
+			<li class="img-blank">
+				<img src="images/assess.png" alt="此处放图片"  width="100%"/>
+			</li>
+			<li>
+				<p>产品:欧莱雅</p>
+				<p>发质不干，富有弹性，水润光滑</p>
+			</li>
+	</ul>
+	<div class="main-content">
+		<ul>
+			<li class="mui-table-view-cell aboutus">
+				<a class="mui-navigate-right" href="javascript:;">
+						优惠券
+				</a>
+			</li>
+		</ul>
+		<div class="price">
+			<p class="t1">预付金额：￥100</p>
+			<p class="t2">线下完成金额后付款金额：￥268</p>
+		</div>
+		
+	</div>
+	<div class="button">
+		<input type="text" placeholder="请输入手机号码" class="telphone"/>
+		<button class="mui-btn mui-btn-danger mui-btn-block">支付</button>
+	</div>
+	
+</body>
+</html>

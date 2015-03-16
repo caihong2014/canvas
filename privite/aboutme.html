@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <!--<script src="js/mui.min.js"></script>-->
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	body,.mui-content,.mui-table-view-cell{background: #fff;}
+    	.mui-content{margin:0;}
+    	.mui-bar-nav{display:block; background: #f8749d; color:#fff;}	
+    	.mui-bar-nav h1{color: #fff;}
+    	.mui-table-view {color: #585858;}
+    	.mui-table-view-cell span{margin-left:20px; float:left; }
+		.mui-table-view-cell span.tel{margin-top: 10px;}
+    	.mui-table-view-inverted .mui-table-view-cell::after{background: #ccc;}
+    	.mui-table-view-inverted::after{background: #ccc;}
+    	#icon-icon-contact{display: inline-block; margin:-20px 0 0 -10px; float:left; width: 80px; height: 80px; }
+		.cell-top{border-top:1px solid #eee; }
+		.right-arrow{float:right;}
+
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <h1 class="mui-title">个人中心</h1>
+	</header>
+	<div class="mui-content">
+			<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
+				<li class="mui-table-view-cell mui-clearfix">
+					<a id="icon-icon-contact">
+						<img src="images/test.png" alt="" title="" />
+					</a>
+					<span class="name">李泽旭</span><br />
+					<span class="tel">13074859403</span>
+					<!--<a class="mui-navigate-right" href="buttons.html">-->
+					<a class="mui-navigate-right right-arrow" href="javascript:;"></a>	
+					</a>
+				</li>
+				<li class="mui-table-view-cell cell-top">
+					<a class="mui-navigate-right" href="javascript:;">
+						优惠券
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="javascript:;">
+						我的收藏
+					</a>
+				</li>
+			</ul>
+	</div>	
+	<nav class="mui-bar mui-bar-tab">
+		<a id="defaultTab" class="mui-tab-item" href="main.html">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="myOrders.html">
+			<span class="mui-icon mui-icon-compose"></span>
+			<span class="mui-tab-label">订单</span>
+		</a>
+		<a class="mui-tab-item" href="aboutme.html">
+			<span class="mui-icon mui-icon-contact"></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+		<a class="mui-tab-item" href="more.html">
+			<span class="mui-icon mui-icon-more"></span>
+			<span class="mui-tab-label">更多</span>
+		</a>
+	</nav>
+</body>
+</html>

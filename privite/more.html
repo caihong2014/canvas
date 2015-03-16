@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <!--<script src="js/mui.min.js"></script>-->
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+     <style type="text/css">
+	    .mui-bar-nav{background: #f8749d; color:#fff;}	
+	    .mui-title{color: #fff;}
+	    .mui-content-padded{margin:10px 0 0 0;}
+	    .mui-btn-block{margin-top: 10px;}
+		.gery-block{height: 10px; background: #efeff4;}
+		.mui-table-view-cell:after{background-color: #fff;}
+		.aboutus{border-top:1px solid #ccc;}
+		.table-cell{height: 44px;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <h1 class="mui-title">更多</h1>
+	</header>
+	<div class="mui-content">
+		<div class="mui-content-padded">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell table-cell">
+					<span>接收通知</span>
+					<div class="mui-switch mui-active">
+						<div class="mui-switch-handle"></div>
+					</div>
+				</li>
+				<li class="gery-block"></li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="zhaopin.html">
+						招聘手艺人
+					</a>
+				</li>
+				<li class="gery-block"></li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="javascript:;">
+						服务范围
+					</a>
+				</li>
+				<li class="mui-table-view-cell aboutus">
+					<a class="mui-navigate-right" href="javascript:;">
+						关于我们
+					</a>
+				</li>
+				
+			</ul>
+			<button class="mui-btn mui-btn-block">退出登录</button>
+		</div>
+	</div>
+	<nav class="mui-bar mui-bar-tab">
+		<a id="defaultTab" class="mui-tab-item" href="main.html">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="myOrders.html">
+			<span class="mui-icon mui-icon-compose"></span>
+			<span class="mui-tab-label">订单</span>
+		</a>
+		<a class="mui-tab-item" href="aboutme.html">
+			<span class="mui-icon mui-icon-contact"></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+		<a class="mui-tab-item" href="more.html">
+			<span class="mui-icon mui-icon-more"></span>
+			<span class="mui-tab-label">更多</span>
+		</a>
+	</nav>
+<script type="text/javascript">
+	(function(){
+		mui('.mui-content .mui-switch').each(function() {//循环所有toggle
+		//toggle.classList.contains('mui-active') 可识别该toggle的开关状态
+		this.parentNode.querySelector('span').innerText = '接收通知' + (this.classList.contains('mui-active') ? '' : '');
+		/**
+		 * toggle 事件监听
+		 */
+		this.addEventListener('toggle', function(event) {
+			//event.detail.isActive 可直接获取当前状态
+			this.parentNode.querySelector('span').innerText = '接收通知' + (event.detail.isActive ? '' : '');
+		});
+	}); 
+	})();
+</script>
+</body>
+</html>
