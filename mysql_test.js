@@ -4,19 +4,6 @@ var db = {
 	TEST_DATABASE: 'nodejs_mysql_db',
 	TEST_TABLE: 'test_table',
 	connection: function(response) {
-
-
-		// console.log(require('mysql'));
-		/* var    Client    = require('mysql').Client; 
-		    client    = new Client();  
-		client.user      = 'root';
-		client.password  = 'root';
-		client.connected = true;
-		var    TEST_DATABASE    = dbname||'nodejs_mysql_db';  
-		var    TEST_TABLE       = tableName||'test_table';
-		console.log(client);
-		*/
-		//client.createClient({'host':'localhost','port':3306,'user':'root','password':'root'});   
 		var Client = require('mysql').Client;
 		var client = new Client();
 		var TEST_DATABASE = 'nodejs_mysql_test';
@@ -27,23 +14,6 @@ var db = {
 		client.host = 'localhost';
 		//client.connect();  
 		console.log(client);
-		/*
-		  client.query('CREATE DATABASE '+TEST_DATABASE, function(err) {
-		                   if(err) {
-		                      console.log('create databse wrong'+err);
-		 return ;
-		  }   
-		  client.query('USE '+TEST_DATABASE);
-		  client.query(  
-		 'CREATE TABLE '+TEST_TABLE+  
-		 '(id INT(11) AUTO_INCREMENT,'+  
-		 'title VARCHAR(255),'+  
-		 'text TEXT,'+  
-		 'created DATETIME,'+  
-		 'PRIMARY KEY (id))'  
-		);  
-		});
-		*/
 		client.query(
 			'INSERT INTO ' + TEST_TABLE + ' ' +
 			'SET title = ?, text = ?, created = ?', ['super cool', 'this is a nice text', '2010-08-16 10:00:23']
@@ -83,3 +53,4 @@ var db = {
 
 };
 exports.db = db;
+// db.connection();
