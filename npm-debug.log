@@ -1,19 +1,25 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'd:\\nodejs\\node.exe',
 1 verbose cli   'd:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'start' ]
+1 verbose cli   'link',
+1 verbose cli   'express' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.35
-4 error Error: ENOENT, open 'd:\canvas\package.json'
-5 error If you need help, you may report this *entire* log,
-5 error including the npm and node versions, at:
-5 error     <http://github.com/npm/npm/issues>
-6 error System Windows_NT 6.2.9200
-7 error command "d:\\nodejs\\node.exe" "d:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
-8 error cwd d:\canvas
-9 error node -v v0.10.35
-10 error npm -v 1.4.28
-11 error path d:\canvas\package.json
-12 error code ENOENT
-13 error errno 34
-14 verbose exit [ 34, true ]
+4 verbose node_modules\express unbuild
+5 verbose link symlinking C:\Users\nan\AppData\Roaming\npm\node_modules\express to d:\canvas\node_modules\express
+6 error Error: EPERM, symlink 'C:\Users\nan\AppData\Roaming\npm\node_modules\express'
+6 error  { [Error: EPERM, symlink 'C:\Users\nan\AppData\Roaming\npm\node_modules\express']
+6 error   errno: 50,
+6 error   code: 'EPERM',
+6 error   path: 'C:\\Users\\nan\\AppData\\Roaming\\npm\\node_modules\\express' }
+7 error Please try running this command again as root/Administrator.
+8 error System Windows_NT 6.2.9200
+9 error command "d:\\nodejs\\node.exe" "d:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "link" "express"
+10 error cwd d:\canvas
+11 error node -v v0.10.35
+12 error npm -v 1.4.28
+13 error path C:\Users\nan\AppData\Roaming\npm\node_modules\express
+14 error code EPERM
+15 error errno 50
+16 error stack Error: EPERM, symlink 'C:\Users\nan\AppData\Roaming\npm\node_modules\express'
+17 verbose exit [ 50, true ]

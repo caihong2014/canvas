@@ -38,12 +38,15 @@ function getData(i) {
 		});
 	};
 }
-for (var i = 1; i <= 4; i++) {
+for (var i = 1; i <= 10; i++) {
 
 	var opts = {
 		url: 'http://me2-sex.lofter.com/tag/美女摄影?page=i',
 		header: {
-			'Connection':'keep-alive'
+			'Connection':'keep-alive',
+			'User-Agent':'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36',
+ 		    'Referer':'http://me2-sex.lofter.com'
+
 		}
 	}
 	getData(i);
