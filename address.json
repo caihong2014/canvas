@@ -1,0 +1,37 @@
+{
+	message: {
+		page_count: 1,
+		curr_page_index: 1,
+		address_list: [
+		{
+			id: 1,
+			address: '国贸招商局大厦21层',
+		},
+		{
+			id: 2,
+			address: '国贸招商局大厦20层',
+		},
+		{
+			id: 3,
+			address: '国贸招商局大厦20层',
+		},
+		{
+			id: 4,
+			address: '国贸招商局大厦20层',
+		},
+		{
+			id: 5,
+			address: '国贸招商局大厦20层',
+		},
+		{
+			id: 6,
+			address: '国贸招商局大厦20层',
+		},
+		{
+			id: 7,
+			address: '国贸招商局大厦20层',
+		}
+		]
+	},
+	success: true
+}

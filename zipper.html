@@ -1,0 +1,3858 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Welcome to Zoe's Zipper</title>
+	<style type="text/css">
+/* line 18, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+body {
+  background: #a5dee4; }
+
+/* line 21, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.container {
+  margin: 700px 0 0 200px;
+  position: relative; }
+
+/* line 28, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.zipper {
+  position: absolute;
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }
+  /* line 30, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  .zipper .left-zipper,
+  .zipper .right-zipper,
+  .zipper .slider,
+  .zipper .segments,
+  .zipper .pins,
+  .zipper .percent {
+    position: absolute; }
+  /* line 42, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  .zipper .left-zipper .pins {
+    left: 20px; }
+  /* line 46, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  .zipper .right-zipper {
+    left: 80px; }
+    /* line 48, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+    .zipper .right-zipper .pins {
+      left: -10px;
+      top: 10px; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 60, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 60, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 60, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 67, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment {
+  width: 30px;
+  height: 5px;
+  background: #897d55;
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-1 {
+  -moz-animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-2 {
+  -moz-animation-delay: -0.43333s;
+  -webkit-animation-delay: -0.43333s;
+  animation-delay: -0.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-3 {
+  -moz-animation-delay: -0.36667s;
+  -webkit-animation-delay: -0.36667s;
+  animation-delay: -0.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-4 {
+  -moz-animation-delay: -0.3s;
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-5 {
+  -moz-animation-delay: -0.23333s;
+  -webkit-animation-delay: -0.23333s;
+  animation-delay: -0.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-6 {
+  -moz-animation-delay: -0.16667s;
+  -webkit-animation-delay: -0.16667s;
+  animation-delay: -0.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-7 {
+  -moz-animation-delay: -0.1s;
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-8 {
+  -moz-animation-delay: -0.03333s;
+  -webkit-animation-delay: -0.03333s;
+  animation-delay: -0.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-9 {
+  -moz-animation-delay: 0.03333s;
+  -webkit-animation-delay: 0.03333s;
+  animation-delay: 0.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-10 {
+  -moz-animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-11 {
+  -moz-animation-delay: 0.16667s;
+  -webkit-animation-delay: 0.16667s;
+  animation-delay: 0.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-12 {
+  -moz-animation-delay: 0.23333s;
+  -webkit-animation-delay: 0.23333s;
+  animation-delay: 0.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-13 {
+  -moz-animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-14 {
+  -moz-animation-delay: 0.36667s;
+  -webkit-animation-delay: 0.36667s;
+  animation-delay: 0.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-15 {
+  -moz-animation-delay: 0.43333s;
+  -webkit-animation-delay: 0.43333s;
+  animation-delay: 0.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-16 {
+  -moz-animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-17 {
+  -moz-animation-delay: 0.56667s;
+  -webkit-animation-delay: 0.56667s;
+  animation-delay: 0.56667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-18 {
+  -moz-animation-delay: 0.63333s;
+  -webkit-animation-delay: 0.63333s;
+  animation-delay: 0.63333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-19 {
+  -moz-animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-20 {
+  -moz-animation-delay: 0.76667s;
+  -webkit-animation-delay: 0.76667s;
+  animation-delay: 0.76667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-21 {
+  -moz-animation-delay: 0.83333s;
+  -webkit-animation-delay: 0.83333s;
+  animation-delay: 0.83333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-22 {
+  -moz-animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-23 {
+  -moz-animation-delay: 0.96667s;
+  -webkit-animation-delay: 0.96667s;
+  animation-delay: 0.96667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-24 {
+  -moz-animation-delay: 1.03333s;
+  -webkit-animation-delay: 1.03333s;
+  animation-delay: 1.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-25 {
+  -moz-animation-delay: 1.1s;
+  -webkit-animation-delay: 1.1s;
+  animation-delay: 1.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-26 {
+  -moz-animation-delay: 1.16667s;
+  -webkit-animation-delay: 1.16667s;
+  animation-delay: 1.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-27 {
+  -moz-animation-delay: 1.23333s;
+  -webkit-animation-delay: 1.23333s;
+  animation-delay: 1.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-28 {
+  -moz-animation-delay: 1.3s;
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-29 {
+  -moz-animation-delay: 1.36667s;
+  -webkit-animation-delay: 1.36667s;
+  animation-delay: 1.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-30 {
+  -moz-animation-delay: 1.43333s;
+  -webkit-animation-delay: 1.43333s;
+  animation-delay: 1.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-31 {
+  -moz-animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-32 {
+  -moz-animation-delay: 1.56667s;
+  -webkit-animation-delay: 1.56667s;
+  animation-delay: 1.56667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-33 {
+  -moz-animation-delay: 1.63333s;
+  -webkit-animation-delay: 1.63333s;
+  animation-delay: 1.63333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-34 {
+  -moz-animation-delay: 1.7s;
+  -webkit-animation-delay: 1.7s;
+  animation-delay: 1.7s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-35 {
+  -moz-animation-delay: 1.76667s;
+  -webkit-animation-delay: 1.76667s;
+  animation-delay: 1.76667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-36 {
+  -moz-animation-delay: 1.83333s;
+  -webkit-animation-delay: 1.83333s;
+  animation-delay: 1.83333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-37 {
+  -moz-animation-delay: 1.9s;
+  -webkit-animation-delay: 1.9s;
+  animation-delay: 1.9s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-38 {
+  -moz-animation-delay: 1.96667s;
+  -webkit-animation-delay: 1.96667s;
+  animation-delay: 1.96667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-39 {
+  -moz-animation-delay: 2.03333s;
+  -webkit-animation-delay: 2.03333s;
+  animation-delay: 2.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-40 {
+  -moz-animation-delay: 2.1s;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-41 {
+  -moz-animation-delay: 2.16667s;
+  -webkit-animation-delay: 2.16667s;
+  animation-delay: 2.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-42 {
+  -moz-animation-delay: 2.23333s;
+  -webkit-animation-delay: 2.23333s;
+  animation-delay: 2.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-43 {
+  -moz-animation-delay: 2.3s;
+  -webkit-animation-delay: 2.3s;
+  animation-delay: 2.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-44 {
+  -moz-animation-delay: 2.36667s;
+  -webkit-animation-delay: 2.36667s;
+  animation-delay: 2.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-45 {
+  -moz-animation-delay: 2.43333s;
+  -webkit-animation-delay: 2.43333s;
+  animation-delay: 2.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-46 {
+  -moz-animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-47 {
+  -moz-animation-delay: 2.56667s;
+  -webkit-animation-delay: 2.56667s;
+  animation-delay: 2.56667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-48 {
+  -moz-animation-delay: 2.63333s;
+  -webkit-animation-delay: 2.63333s;
+  animation-delay: 2.63333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-49 {
+  -moz-animation-delay: 2.7s;
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-50 {
+  -moz-animation-delay: 2.76667s;
+  -webkit-animation-delay: 2.76667s;
+  animation-delay: 2.76667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-51 {
+  -moz-animation-delay: 2.83333s;
+  -webkit-animation-delay: 2.83333s;
+  animation-delay: 2.83333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-52 {
+  -moz-animation-delay: 2.9s;
+  -webkit-animation-delay: 2.9s;
+  animation-delay: 2.9s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-53 {
+  -moz-animation-delay: 2.96667s;
+  -webkit-animation-delay: 2.96667s;
+  animation-delay: 2.96667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-54 {
+  -moz-animation-delay: 3.03333s;
+  -webkit-animation-delay: 3.03333s;
+  animation-delay: 3.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-55 {
+  -moz-animation-delay: 3.1s;
+  -webkit-animation-delay: 3.1s;
+  animation-delay: 3.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-56 {
+  -moz-animation-delay: 3.16667s;
+  -webkit-animation-delay: 3.16667s;
+  animation-delay: 3.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-57 {
+  -moz-animation-delay: 3.23333s;
+  -webkit-animation-delay: 3.23333s;
+  animation-delay: 3.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-58 {
+  -moz-animation-delay: 3.3s;
+  -webkit-animation-delay: 3.3s;
+  animation-delay: 3.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-59 {
+  -moz-animation-delay: 3.36667s;
+  -webkit-animation-delay: 3.36667s;
+  animation-delay: 3.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-60 {
+  -moz-animation-delay: 3.43333s;
+  -webkit-animation-delay: 3.43333s;
+  animation-delay: 3.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-61 {
+  -moz-animation-delay: 3.5s;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-62 {
+  -moz-animation-delay: 3.56667s;
+  -webkit-animation-delay: 3.56667s;
+  animation-delay: 3.56667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-63 {
+  -moz-animation-delay: 3.63333s;
+  -webkit-animation-delay: 3.63333s;
+  animation-delay: 3.63333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-64 {
+  -moz-animation-delay: 3.7s;
+  -webkit-animation-delay: 3.7s;
+  animation-delay: 3.7s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-65 {
+  -moz-animation-delay: 3.76667s;
+  -webkit-animation-delay: 3.76667s;
+  animation-delay: 3.76667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-66 {
+  -moz-animation-delay: 3.83333s;
+  -webkit-animation-delay: 3.83333s;
+  animation-delay: 3.83333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-67 {
+  -moz-animation-delay: 3.9s;
+  -webkit-animation-delay: 3.9s;
+  animation-delay: 3.9s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-68 {
+  -moz-animation-delay: 3.96667s;
+  -webkit-animation-delay: 3.96667s;
+  animation-delay: 3.96667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-69 {
+  -moz-animation-delay: 4.03333s;
+  -webkit-animation-delay: 4.03333s;
+  animation-delay: 4.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-70 {
+  -moz-animation-delay: 4.1s;
+  -webkit-animation-delay: 4.1s;
+  animation-delay: 4.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-71 {
+  -moz-animation-delay: 4.16667s;
+  -webkit-animation-delay: 4.16667s;
+  animation-delay: 4.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-72 {
+  -moz-animation-delay: 4.23333s;
+  -webkit-animation-delay: 4.23333s;
+  animation-delay: 4.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-73 {
+  -moz-animation-delay: 4.3s;
+  -webkit-animation-delay: 4.3s;
+  animation-delay: 4.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-74 {
+  -moz-animation-delay: 4.36667s;
+  -webkit-animation-delay: 4.36667s;
+  animation-delay: 4.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-75 {
+  -moz-animation-delay: 4.43333s;
+  -webkit-animation-delay: 4.43333s;
+  animation-delay: 4.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-76 {
+  -moz-animation-delay: 4.5s;
+  -webkit-animation-delay: 4.5s;
+  animation-delay: 4.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-77 {
+  -moz-animation-delay: 4.56667s;
+  -webkit-animation-delay: 4.56667s;
+  animation-delay: 4.56667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-78 {
+  -moz-animation-delay: 4.63333s;
+  -webkit-animation-delay: 4.63333s;
+  animation-delay: 4.63333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-79 {
+  -moz-animation-delay: 4.7s;
+  -webkit-animation-delay: 4.7s;
+  animation-delay: 4.7s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-80 {
+  -moz-animation-delay: 4.76667s;
+  -webkit-animation-delay: 4.76667s;
+  animation-delay: 4.76667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-81 {
+  -moz-animation-delay: 4.83333s;
+  -webkit-animation-delay: 4.83333s;
+  animation-delay: 4.83333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-82 {
+  -moz-animation-delay: 4.9s;
+  -webkit-animation-delay: 4.9s;
+  animation-delay: 4.9s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-83 {
+  -moz-animation-delay: 4.96667s;
+  -webkit-animation-delay: 4.96667s;
+  animation-delay: 4.96667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-84 {
+  -moz-animation-delay: 5.03333s;
+  -webkit-animation-delay: 5.03333s;
+  animation-delay: 5.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-85 {
+  -moz-animation-delay: 5.1s;
+  -webkit-animation-delay: 5.1s;
+  animation-delay: 5.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-86 {
+  -moz-animation-delay: 5.16667s;
+  -webkit-animation-delay: 5.16667s;
+  animation-delay: 5.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-87 {
+  -moz-animation-delay: 5.23333s;
+  -webkit-animation-delay: 5.23333s;
+  animation-delay: 5.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-88 {
+  -moz-animation-delay: 5.3s;
+  -webkit-animation-delay: 5.3s;
+  animation-delay: 5.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-89 {
+  -moz-animation-delay: 5.36667s;
+  -webkit-animation-delay: 5.36667s;
+  animation-delay: 5.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-90 {
+  -moz-animation-delay: 5.43333s;
+  -webkit-animation-delay: 5.43333s;
+  animation-delay: 5.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-91 {
+  -moz-animation-delay: 5.5s;
+  -webkit-animation-delay: 5.5s;
+  animation-delay: 5.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-92 {
+  -moz-animation-delay: 5.56667s;
+  -webkit-animation-delay: 5.56667s;
+  animation-delay: 5.56667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-93 {
+  -moz-animation-delay: 5.63333s;
+  -webkit-animation-delay: 5.63333s;
+  animation-delay: 5.63333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-94 {
+  -moz-animation-delay: 5.7s;
+  -webkit-animation-delay: 5.7s;
+  animation-delay: 5.7s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-95 {
+  -moz-animation-delay: 5.76667s;
+  -webkit-animation-delay: 5.76667s;
+  animation-delay: 5.76667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-96 {
+  -moz-animation-delay: 5.83333s;
+  -webkit-animation-delay: 5.83333s;
+  animation-delay: 5.83333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-97 {
+  -moz-animation-delay: 5.9s;
+  -webkit-animation-delay: 5.9s;
+  animation-delay: 5.9s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-98 {
+  -moz-animation-delay: 5.96667s;
+  -webkit-animation-delay: 5.96667s;
+  animation-delay: 5.96667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-99 {
+  -moz-animation-delay: 6.03333s;
+  -webkit-animation-delay: 6.03333s;
+  animation-delay: 6.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-100 {
+  -moz-animation-delay: 6.1s;
+  -webkit-animation-delay: 6.1s;
+  animation-delay: 6.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-101 {
+  -moz-animation-delay: 6.16667s;
+  -webkit-animation-delay: 6.16667s;
+  animation-delay: 6.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-102 {
+  -moz-animation-delay: 6.23333s;
+  -webkit-animation-delay: 6.23333s;
+  animation-delay: 6.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-103 {
+  -moz-animation-delay: 6.3s;
+  -webkit-animation-delay: 6.3s;
+  animation-delay: 6.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-104 {
+  -moz-animation-delay: 6.36667s;
+  -webkit-animation-delay: 6.36667s;
+  animation-delay: 6.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-105 {
+  -moz-animation-delay: 6.43333s;
+  -webkit-animation-delay: 6.43333s;
+  animation-delay: 6.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-106 {
+  -moz-animation-delay: 6.5s;
+  -webkit-animation-delay: 6.5s;
+  animation-delay: 6.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-107 {
+  -moz-animation-delay: 6.56667s;
+  -webkit-animation-delay: 6.56667s;
+  animation-delay: 6.56667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-108 {
+  -moz-animation-delay: 6.63333s;
+  -webkit-animation-delay: 6.63333s;
+  animation-delay: 6.63333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-109 {
+  -moz-animation-delay: 6.7s;
+  -webkit-animation-delay: 6.7s;
+  animation-delay: 6.7s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-110 {
+  -moz-animation-delay: 6.76667s;
+  -webkit-animation-delay: 6.76667s;
+  animation-delay: 6.76667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-111 {
+  -moz-animation-delay: 6.83333s;
+  -webkit-animation-delay: 6.83333s;
+  animation-delay: 6.83333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-112 {
+  -moz-animation-delay: 6.9s;
+  -webkit-animation-delay: 6.9s;
+  animation-delay: 6.9s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-113 {
+  -moz-animation-delay: 6.96667s;
+  -webkit-animation-delay: 6.96667s;
+  animation-delay: 6.96667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-114 {
+  -moz-animation-delay: 7.03333s;
+  -webkit-animation-delay: 7.03333s;
+  animation-delay: 7.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-115 {
+  -moz-animation-delay: 7.1s;
+  -webkit-animation-delay: 7.1s;
+  animation-delay: 7.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-116 {
+  -moz-animation-delay: 7.16667s;
+  -webkit-animation-delay: 7.16667s;
+  animation-delay: 7.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-117 {
+  -moz-animation-delay: 7.23333s;
+  -webkit-animation-delay: 7.23333s;
+  animation-delay: 7.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-118 {
+  -moz-animation-delay: 7.3s;
+  -webkit-animation-delay: 7.3s;
+  animation-delay: 7.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-119 {
+  -moz-animation-delay: 7.36667s;
+  -webkit-animation-delay: 7.36667s;
+  animation-delay: 7.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .segment-120 {
+  -moz-animation-delay: 7.43333s;
+  -webkit-animation-delay: 7.43333s;
+  animation-delay: 7.43333s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 60, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 60, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 60, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 67, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment {
+  width: 30px;
+  height: 5px;
+  background: #897d55;
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-1 {
+  -moz-animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-2 {
+  -moz-animation-delay: -0.43333s;
+  -webkit-animation-delay: -0.43333s;
+  animation-delay: -0.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-3 {
+  -moz-animation-delay: -0.36667s;
+  -webkit-animation-delay: -0.36667s;
+  animation-delay: -0.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-4 {
+  -moz-animation-delay: -0.3s;
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-5 {
+  -moz-animation-delay: -0.23333s;
+  -webkit-animation-delay: -0.23333s;
+  animation-delay: -0.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-6 {
+  -moz-animation-delay: -0.16667s;
+  -webkit-animation-delay: -0.16667s;
+  animation-delay: -0.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-7 {
+  -moz-animation-delay: -0.1s;
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-8 {
+  -moz-animation-delay: -0.03333s;
+  -webkit-animation-delay: -0.03333s;
+  animation-delay: -0.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-9 {
+  -moz-animation-delay: 0.03333s;
+  -webkit-animation-delay: 0.03333s;
+  animation-delay: 0.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-10 {
+  -moz-animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-11 {
+  -moz-animation-delay: 0.16667s;
+  -webkit-animation-delay: 0.16667s;
+  animation-delay: 0.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-12 {
+  -moz-animation-delay: 0.23333s;
+  -webkit-animation-delay: 0.23333s;
+  animation-delay: 0.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-13 {
+  -moz-animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-14 {
+  -moz-animation-delay: 0.36667s;
+  -webkit-animation-delay: 0.36667s;
+  animation-delay: 0.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-15 {
+  -moz-animation-delay: 0.43333s;
+  -webkit-animation-delay: 0.43333s;
+  animation-delay: 0.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-16 {
+  -moz-animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-17 {
+  -moz-animation-delay: 0.56667s;
+  -webkit-animation-delay: 0.56667s;
+  animation-delay: 0.56667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-18 {
+  -moz-animation-delay: 0.63333s;
+  -webkit-animation-delay: 0.63333s;
+  animation-delay: 0.63333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-19 {
+  -moz-animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-20 {
+  -moz-animation-delay: 0.76667s;
+  -webkit-animation-delay: 0.76667s;
+  animation-delay: 0.76667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-21 {
+  -moz-animation-delay: 0.83333s;
+  -webkit-animation-delay: 0.83333s;
+  animation-delay: 0.83333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-22 {
+  -moz-animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-23 {
+  -moz-animation-delay: 0.96667s;
+  -webkit-animation-delay: 0.96667s;
+  animation-delay: 0.96667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-24 {
+  -moz-animation-delay: 1.03333s;
+  -webkit-animation-delay: 1.03333s;
+  animation-delay: 1.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-25 {
+  -moz-animation-delay: 1.1s;
+  -webkit-animation-delay: 1.1s;
+  animation-delay: 1.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-26 {
+  -moz-animation-delay: 1.16667s;
+  -webkit-animation-delay: 1.16667s;
+  animation-delay: 1.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-27 {
+  -moz-animation-delay: 1.23333s;
+  -webkit-animation-delay: 1.23333s;
+  animation-delay: 1.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-28 {
+  -moz-animation-delay: 1.3s;
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-29 {
+  -moz-animation-delay: 1.36667s;
+  -webkit-animation-delay: 1.36667s;
+  animation-delay: 1.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-30 {
+  -moz-animation-delay: 1.43333s;
+  -webkit-animation-delay: 1.43333s;
+  animation-delay: 1.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-31 {
+  -moz-animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-32 {
+  -moz-animation-delay: 1.56667s;
+  -webkit-animation-delay: 1.56667s;
+  animation-delay: 1.56667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-33 {
+  -moz-animation-delay: 1.63333s;
+  -webkit-animation-delay: 1.63333s;
+  animation-delay: 1.63333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-34 {
+  -moz-animation-delay: 1.7s;
+  -webkit-animation-delay: 1.7s;
+  animation-delay: 1.7s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-35 {
+  -moz-animation-delay: 1.76667s;
+  -webkit-animation-delay: 1.76667s;
+  animation-delay: 1.76667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-36 {
+  -moz-animation-delay: 1.83333s;
+  -webkit-animation-delay: 1.83333s;
+  animation-delay: 1.83333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-37 {
+  -moz-animation-delay: 1.9s;
+  -webkit-animation-delay: 1.9s;
+  animation-delay: 1.9s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-38 {
+  -moz-animation-delay: 1.96667s;
+  -webkit-animation-delay: 1.96667s;
+  animation-delay: 1.96667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-39 {
+  -moz-animation-delay: 2.03333s;
+  -webkit-animation-delay: 2.03333s;
+  animation-delay: 2.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-40 {
+  -moz-animation-delay: 2.1s;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-41 {
+  -moz-animation-delay: 2.16667s;
+  -webkit-animation-delay: 2.16667s;
+  animation-delay: 2.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-42 {
+  -moz-animation-delay: 2.23333s;
+  -webkit-animation-delay: 2.23333s;
+  animation-delay: 2.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-43 {
+  -moz-animation-delay: 2.3s;
+  -webkit-animation-delay: 2.3s;
+  animation-delay: 2.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-44 {
+  -moz-animation-delay: 2.36667s;
+  -webkit-animation-delay: 2.36667s;
+  animation-delay: 2.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-45 {
+  -moz-animation-delay: 2.43333s;
+  -webkit-animation-delay: 2.43333s;
+  animation-delay: 2.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-46 {
+  -moz-animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-47 {
+  -moz-animation-delay: 2.56667s;
+  -webkit-animation-delay: 2.56667s;
+  animation-delay: 2.56667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-48 {
+  -moz-animation-delay: 2.63333s;
+  -webkit-animation-delay: 2.63333s;
+  animation-delay: 2.63333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-49 {
+  -moz-animation-delay: 2.7s;
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-50 {
+  -moz-animation-delay: 2.76667s;
+  -webkit-animation-delay: 2.76667s;
+  animation-delay: 2.76667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-51 {
+  -moz-animation-delay: 2.83333s;
+  -webkit-animation-delay: 2.83333s;
+  animation-delay: 2.83333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-52 {
+  -moz-animation-delay: 2.9s;
+  -webkit-animation-delay: 2.9s;
+  animation-delay: 2.9s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-53 {
+  -moz-animation-delay: 2.96667s;
+  -webkit-animation-delay: 2.96667s;
+  animation-delay: 2.96667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-54 {
+  -moz-animation-delay: 3.03333s;
+  -webkit-animation-delay: 3.03333s;
+  animation-delay: 3.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-55 {
+  -moz-animation-delay: 3.1s;
+  -webkit-animation-delay: 3.1s;
+  animation-delay: 3.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-56 {
+  -moz-animation-delay: 3.16667s;
+  -webkit-animation-delay: 3.16667s;
+  animation-delay: 3.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-57 {
+  -moz-animation-delay: 3.23333s;
+  -webkit-animation-delay: 3.23333s;
+  animation-delay: 3.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-58 {
+  -moz-animation-delay: 3.3s;
+  -webkit-animation-delay: 3.3s;
+  animation-delay: 3.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-59 {
+  -moz-animation-delay: 3.36667s;
+  -webkit-animation-delay: 3.36667s;
+  animation-delay: 3.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-60 {
+  -moz-animation-delay: 3.43333s;
+  -webkit-animation-delay: 3.43333s;
+  animation-delay: 3.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-61 {
+  -moz-animation-delay: 3.5s;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-62 {
+  -moz-animation-delay: 3.56667s;
+  -webkit-animation-delay: 3.56667s;
+  animation-delay: 3.56667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-63 {
+  -moz-animation-delay: 3.63333s;
+  -webkit-animation-delay: 3.63333s;
+  animation-delay: 3.63333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-64 {
+  -moz-animation-delay: 3.7s;
+  -webkit-animation-delay: 3.7s;
+  animation-delay: 3.7s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-65 {
+  -moz-animation-delay: 3.76667s;
+  -webkit-animation-delay: 3.76667s;
+  animation-delay: 3.76667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-66 {
+  -moz-animation-delay: 3.83333s;
+  -webkit-animation-delay: 3.83333s;
+  animation-delay: 3.83333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-67 {
+  -moz-animation-delay: 3.9s;
+  -webkit-animation-delay: 3.9s;
+  animation-delay: 3.9s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-68 {
+  -moz-animation-delay: 3.96667s;
+  -webkit-animation-delay: 3.96667s;
+  animation-delay: 3.96667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-69 {
+  -moz-animation-delay: 4.03333s;
+  -webkit-animation-delay: 4.03333s;
+  animation-delay: 4.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-70 {
+  -moz-animation-delay: 4.1s;
+  -webkit-animation-delay: 4.1s;
+  animation-delay: 4.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-71 {
+  -moz-animation-delay: 4.16667s;
+  -webkit-animation-delay: 4.16667s;
+  animation-delay: 4.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-72 {
+  -moz-animation-delay: 4.23333s;
+  -webkit-animation-delay: 4.23333s;
+  animation-delay: 4.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-73 {
+  -moz-animation-delay: 4.3s;
+  -webkit-animation-delay: 4.3s;
+  animation-delay: 4.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-74 {
+  -moz-animation-delay: 4.36667s;
+  -webkit-animation-delay: 4.36667s;
+  animation-delay: 4.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-75 {
+  -moz-animation-delay: 4.43333s;
+  -webkit-animation-delay: 4.43333s;
+  animation-delay: 4.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-76 {
+  -moz-animation-delay: 4.5s;
+  -webkit-animation-delay: 4.5s;
+  animation-delay: 4.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-77 {
+  -moz-animation-delay: 4.56667s;
+  -webkit-animation-delay: 4.56667s;
+  animation-delay: 4.56667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-78 {
+  -moz-animation-delay: 4.63333s;
+  -webkit-animation-delay: 4.63333s;
+  animation-delay: 4.63333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-79 {
+  -moz-animation-delay: 4.7s;
+  -webkit-animation-delay: 4.7s;
+  animation-delay: 4.7s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-80 {
+  -moz-animation-delay: 4.76667s;
+  -webkit-animation-delay: 4.76667s;
+  animation-delay: 4.76667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-81 {
+  -moz-animation-delay: 4.83333s;
+  -webkit-animation-delay: 4.83333s;
+  animation-delay: 4.83333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-82 {
+  -moz-animation-delay: 4.9s;
+  -webkit-animation-delay: 4.9s;
+  animation-delay: 4.9s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-83 {
+  -moz-animation-delay: 4.96667s;
+  -webkit-animation-delay: 4.96667s;
+  animation-delay: 4.96667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-84 {
+  -moz-animation-delay: 5.03333s;
+  -webkit-animation-delay: 5.03333s;
+  animation-delay: 5.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-85 {
+  -moz-animation-delay: 5.1s;
+  -webkit-animation-delay: 5.1s;
+  animation-delay: 5.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-86 {
+  -moz-animation-delay: 5.16667s;
+  -webkit-animation-delay: 5.16667s;
+  animation-delay: 5.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-87 {
+  -moz-animation-delay: 5.23333s;
+  -webkit-animation-delay: 5.23333s;
+  animation-delay: 5.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-88 {
+  -moz-animation-delay: 5.3s;
+  -webkit-animation-delay: 5.3s;
+  animation-delay: 5.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-89 {
+  -moz-animation-delay: 5.36667s;
+  -webkit-animation-delay: 5.36667s;
+  animation-delay: 5.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-90 {
+  -moz-animation-delay: 5.43333s;
+  -webkit-animation-delay: 5.43333s;
+  animation-delay: 5.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-91 {
+  -moz-animation-delay: 5.5s;
+  -webkit-animation-delay: 5.5s;
+  animation-delay: 5.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-92 {
+  -moz-animation-delay: 5.56667s;
+  -webkit-animation-delay: 5.56667s;
+  animation-delay: 5.56667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-93 {
+  -moz-animation-delay: 5.63333s;
+  -webkit-animation-delay: 5.63333s;
+  animation-delay: 5.63333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-94 {
+  -moz-animation-delay: 5.7s;
+  -webkit-animation-delay: 5.7s;
+  animation-delay: 5.7s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-95 {
+  -moz-animation-delay: 5.76667s;
+  -webkit-animation-delay: 5.76667s;
+  animation-delay: 5.76667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-96 {
+  -moz-animation-delay: 5.83333s;
+  -webkit-animation-delay: 5.83333s;
+  animation-delay: 5.83333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-97 {
+  -moz-animation-delay: 5.9s;
+  -webkit-animation-delay: 5.9s;
+  animation-delay: 5.9s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-98 {
+  -moz-animation-delay: 5.96667s;
+  -webkit-animation-delay: 5.96667s;
+  animation-delay: 5.96667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-99 {
+  -moz-animation-delay: 6.03333s;
+  -webkit-animation-delay: 6.03333s;
+  animation-delay: 6.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-100 {
+  -moz-animation-delay: 6.1s;
+  -webkit-animation-delay: 6.1s;
+  animation-delay: 6.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-101 {
+  -moz-animation-delay: 6.16667s;
+  -webkit-animation-delay: 6.16667s;
+  animation-delay: 6.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-102 {
+  -moz-animation-delay: 6.23333s;
+  -webkit-animation-delay: 6.23333s;
+  animation-delay: 6.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-103 {
+  -moz-animation-delay: 6.3s;
+  -webkit-animation-delay: 6.3s;
+  animation-delay: 6.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-104 {
+  -moz-animation-delay: 6.36667s;
+  -webkit-animation-delay: 6.36667s;
+  animation-delay: 6.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-105 {
+  -moz-animation-delay: 6.43333s;
+  -webkit-animation-delay: 6.43333s;
+  animation-delay: 6.43333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-106 {
+  -moz-animation-delay: 6.5s;
+  -webkit-animation-delay: 6.5s;
+  animation-delay: 6.5s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-107 {
+  -moz-animation-delay: 6.56667s;
+  -webkit-animation-delay: 6.56667s;
+  animation-delay: 6.56667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-108 {
+  -moz-animation-delay: 6.63333s;
+  -webkit-animation-delay: 6.63333s;
+  animation-delay: 6.63333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-109 {
+  -moz-animation-delay: 6.7s;
+  -webkit-animation-delay: 6.7s;
+  animation-delay: 6.7s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-110 {
+  -moz-animation-delay: 6.76667s;
+  -webkit-animation-delay: 6.76667s;
+  animation-delay: 6.76667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-111 {
+  -moz-animation-delay: 6.83333s;
+  -webkit-animation-delay: 6.83333s;
+  animation-delay: 6.83333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-112 {
+  -moz-animation-delay: 6.9s;
+  -webkit-animation-delay: 6.9s;
+  animation-delay: 6.9s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-113 {
+  -moz-animation-delay: 6.96667s;
+  -webkit-animation-delay: 6.96667s;
+  animation-delay: 6.96667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-114 {
+  -moz-animation-delay: 7.03333s;
+  -webkit-animation-delay: 7.03333s;
+  animation-delay: 7.03333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-115 {
+  -moz-animation-delay: 7.1s;
+  -webkit-animation-delay: 7.1s;
+  animation-delay: 7.1s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-116 {
+  -moz-animation-delay: 7.16667s;
+  -webkit-animation-delay: 7.16667s;
+  animation-delay: 7.16667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-117 {
+  -moz-animation-delay: 7.23333s;
+  -webkit-animation-delay: 7.23333s;
+  animation-delay: 7.23333s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-118 {
+  -moz-animation-delay: 7.3s;
+  -webkit-animation-delay: 7.3s;
+  animation-delay: 7.3s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-119 {
+  -moz-animation-delay: 7.36667s;
+  -webkit-animation-delay: 7.36667s;
+  animation-delay: 7.36667s; }
+/* line 77, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .segment-120 {
+  -moz-animation-delay: 7.43333s;
+  -webkit-animation-delay: 7.43333s;
+  animation-delay: 7.43333s; }
+
+/* line 93, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin {
+  width: 20px;
+  height: 10px;
+  background: #f6c555;
+  position: relative;
+  z-index: 2; }
+  /* line 99, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  .left-zipper .pin + .pin {
+    margin-top: 10px; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-1 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-2 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: -0.23333s;
+  -webkit-animation-delay: -0.23333s;
+  animation-delay: -0.23333s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-3 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 0.03333s;
+  -webkit-animation-delay: 0.03333s;
+  animation-delay: 0.03333s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-4 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-5 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 0.56667s;
+  -webkit-animation-delay: 0.56667s;
+  animation-delay: 0.56667s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-6 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 0.83333s;
+  -webkit-animation-delay: 0.83333s;
+  animation-delay: 0.83333s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-7 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 1.1s;
+  -webkit-animation-delay: 1.1s;
+  animation-delay: 1.1s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-8 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 1.36667s;
+  -webkit-animation-delay: 1.36667s;
+  animation-delay: 1.36667s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-9 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 1.63333s;
+  -webkit-animation-delay: 1.63333s;
+  animation-delay: 1.63333s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-10 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 1.9s;
+  -webkit-animation-delay: 1.9s;
+  animation-delay: 1.9s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-11 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 2.16667s;
+  -webkit-animation-delay: 2.16667s;
+  animation-delay: 2.16667s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-12 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 2.43333s;
+  -webkit-animation-delay: 2.43333s;
+  animation-delay: 2.43333s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-13 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 2.7s;
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-14 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 2.96667s;
+  -webkit-animation-delay: 2.96667s;
+  animation-delay: 2.96667s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-15 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 3.23333s;
+  -webkit-animation-delay: 3.23333s;
+  animation-delay: 3.23333s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-16 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 3.5s;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-17 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 3.76667s;
+  -webkit-animation-delay: 3.76667s;
+  animation-delay: 3.76667s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-18 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 4.03333s;
+  -webkit-animation-delay: 4.03333s;
+  animation-delay: 4.03333s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-19 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 4.3s;
+  -webkit-animation-delay: 4.3s;
+  animation-delay: 4.3s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-20 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 4.56667s;
+  -webkit-animation-delay: 4.56667s;
+  animation-delay: 4.56667s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-21 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 4.83333s;
+  -webkit-animation-delay: 4.83333s;
+  animation-delay: 4.83333s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-22 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 5.1s;
+  -webkit-animation-delay: 5.1s;
+  animation-delay: 5.1s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-23 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 5.36667s;
+  -webkit-animation-delay: 5.36667s;
+  animation-delay: 5.36667s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-24 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 5.63333s;
+  -webkit-animation-delay: 5.63333s;
+  animation-delay: 5.63333s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-25 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 5.9s;
+  -webkit-animation-delay: 5.9s;
+  animation-delay: 5.9s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-26 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 6.16667s;
+  -webkit-animation-delay: 6.16667s;
+  animation-delay: 6.16667s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-27 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 6.43333s;
+  -webkit-animation-delay: 6.43333s;
+  animation-delay: 6.43333s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-28 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 6.7s;
+  -webkit-animation-delay: 6.7s;
+  animation-delay: 6.7s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-29 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 6.96667s;
+  -webkit-animation-delay: 6.96667s;
+  animation-delay: 6.96667s; }
+
+@-moz-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    transform: translate(20px); } }
+@-webkit-keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+@keyframes left-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(20px);
+    -ms-transform: translate(20px);
+    -o-transform: translate(20px);
+    -webkit-transform: translate(20px);
+    transform: translate(20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.left-zipper .pin-30 {
+  -moz-animation: left-segment-frames 0.5s linear;
+  -webkit-animation: left-segment-frames 0.5s linear;
+  animation: left-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 7.23333s;
+  -webkit-animation-delay: 7.23333s;
+  animation-delay: 7.23333s; }
+
+/* line 93, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin {
+  width: 20px;
+  height: 10px;
+  background: #f6c555;
+  position: relative;
+  z-index: 2; }
+  /* line 99, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  .right-zipper .pin + .pin {
+    margin-top: 10px; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-1 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: -0.36667s;
+  -webkit-animation-delay: -0.36667s;
+  animation-delay: -0.36667s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-2 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: -0.1s;
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-3 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 0.16667s;
+  -webkit-animation-delay: 0.16667s;
+  animation-delay: 0.16667s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-4 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 0.43333s;
+  -webkit-animation-delay: 0.43333s;
+  animation-delay: 0.43333s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-5 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-6 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 0.96667s;
+  -webkit-animation-delay: 0.96667s;
+  animation-delay: 0.96667s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-7 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 1.23333s;
+  -webkit-animation-delay: 1.23333s;
+  animation-delay: 1.23333s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-8 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-9 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 1.76667s;
+  -webkit-animation-delay: 1.76667s;
+  animation-delay: 1.76667s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-10 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 2.03333s;
+  -webkit-animation-delay: 2.03333s;
+  animation-delay: 2.03333s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-11 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 2.3s;
+  -webkit-animation-delay: 2.3s;
+  animation-delay: 2.3s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-12 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 2.56667s;
+  -webkit-animation-delay: 2.56667s;
+  animation-delay: 2.56667s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-13 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 2.83333s;
+  -webkit-animation-delay: 2.83333s;
+  animation-delay: 2.83333s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-14 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 3.1s;
+  -webkit-animation-delay: 3.1s;
+  animation-delay: 3.1s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-15 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 3.36667s;
+  -webkit-animation-delay: 3.36667s;
+  animation-delay: 3.36667s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-16 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 3.63333s;
+  -webkit-animation-delay: 3.63333s;
+  animation-delay: 3.63333s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-17 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 3.9s;
+  -webkit-animation-delay: 3.9s;
+  animation-delay: 3.9s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-18 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 4.16667s;
+  -webkit-animation-delay: 4.16667s;
+  animation-delay: 4.16667s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-19 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 4.43333s;
+  -webkit-animation-delay: 4.43333s;
+  animation-delay: 4.43333s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-20 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 4.7s;
+  -webkit-animation-delay: 4.7s;
+  animation-delay: 4.7s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-21 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 4.96667s;
+  -webkit-animation-delay: 4.96667s;
+  animation-delay: 4.96667s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-22 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 5.23333s;
+  -webkit-animation-delay: 5.23333s;
+  animation-delay: 5.23333s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-23 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 5.5s;
+  -webkit-animation-delay: 5.5s;
+  animation-delay: 5.5s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-24 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 5.76667s;
+  -webkit-animation-delay: 5.76667s;
+  animation-delay: 5.76667s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-25 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 6.03333s;
+  -webkit-animation-delay: 6.03333s;
+  animation-delay: 6.03333s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-26 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 6.3s;
+  -webkit-animation-delay: 6.3s;
+  animation-delay: 6.3s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-27 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 6.56667s;
+  -webkit-animation-delay: 6.56667s;
+  animation-delay: 6.56667s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-28 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 6.83333s;
+  -webkit-animation-delay: 6.83333s;
+  animation-delay: 6.83333s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-29 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 7.1s;
+  -webkit-animation-delay: 7.1s;
+  animation-delay: 7.1s; }
+
+@-moz-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    transform: translate(-20px); } }
+@-webkit-keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+@keyframes right-segment-frames {
+  /* line 108, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px); } }
+/* line 112, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.right-zipper .pin-30 {
+  -moz-animation: right-segment-frames 0.5s linear;
+  -webkit-animation: right-segment-frames 0.5s linear;
+  animation: right-segment-frames 0.5s linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-delay: 7.36667s;
+  -webkit-animation-delay: 7.36667s;
+  animation-delay: 7.36667s; }
+
+@-moz-keyframes slider-frames {
+  /* line 132, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translateY(600px);
+    transform: translateY(600px); } }
+@-webkit-keyframes slider-frames {
+  /* line 132, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -webkit-transform: translateY(600px);
+    transform: translateY(600px); } }
+@keyframes slider-frames {
+  /* line 132, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  to {
+    -moz-transform: translateY(600px);
+    -ms-transform: translateY(600px);
+    -o-transform: translateY(600px);
+    -webkit-transform: translateY(600px);
+    transform: translateY(600px); } }
+/* line 137, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.slider {
+  width: 40px;
+  height: 40px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  background: #554236;
+  left: 35px;
+  top: -20px;
+  z-index: 10;
+  -moz-animation: slider-frames 8s linear 0s;
+  -webkit-animation: slider-frames 8s linear 0s;
+  animation: slider-frames 8s linear 0s;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+  /* line 148, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  .slider .retaining-ring {
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    top: 20px;
+    left: 17.5px;
+    background: #db4d6d; }
+  /* line 156, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  .slider .pull-tab-top {
+    position: relative;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    top: 30px;
+    border: 5px solid #db4d6d; }
+  /* line 165, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+  .slider .pull-tab-bottom {
+    position: relative;
+    left: 5px;
+    width: 20px;
+    height: 8px;
+    background: transparent;
+    top: 30px;
+    border: 5px solid #db4d6d;
+    border-top: 13px solid #db4d6d; }
+
+/* line 178, /Users/zoe/Desktop/GitHub/zipper/source/stylesheets/all.scss */
+.percent {
+  color: white;
+  font-size: 36px;
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  left: 700px;
+  top: -72px; }
+
+
+
+
+
+	</style>
+  </head>
+  
+  <body class="index">
+    <div class="container">
+
+
+  <div class="zipper">
+    <div class="left-zipper">
+      <div class="segments">
+        
+          <div class="segment segment-1"></div>
+        
+          <div class="segment segment-2"></div>
+        
+          <div class="segment segment-3"></div>
+        
+          <div class="segment segment-4"></div>
+        
+          <div class="segment segment-5"></div>
+        
+          <div class="segment segment-6"></div>
+        
+          <div class="segment segment-7"></div>
+        
+          <div class="segment segment-8"></div>
+        
+          <div class="segment segment-9"></div>
+        
+          <div class="segment segment-10"></div>
+        
+          <div class="segment segment-11"></div>
+        
+          <div class="segment segment-12"></div>
+        
+          <div class="segment segment-13"></div>
+        
+          <div class="segment segment-14"></div>
+        
+          <div class="segment segment-15"></div>
+        
+          <div class="segment segment-16"></div>
+        
+          <div class="segment segment-17"></div>
+        
+          <div class="segment segment-18"></div>
+        
+          <div class="segment segment-19"></div>
+        
+          <div class="segment segment-20"></div>
+        
+          <div class="segment segment-21"></div>
+        
+          <div class="segment segment-22"></div>
+        
+          <div class="segment segment-23"></div>
+        
+          <div class="segment segment-24"></div>
+        
+          <div class="segment segment-25"></div>
+        
+          <div class="segment segment-26"></div>
+        
+          <div class="segment segment-27"></div>
+        
+          <div class="segment segment-28"></div>
+        
+          <div class="segment segment-29"></div>
+        
+          <div class="segment segment-30"></div>
+        
+          <div class="segment segment-31"></div>
+        
+          <div class="segment segment-32"></div>
+        
+          <div class="segment segment-33"></div>
+        
+          <div class="segment segment-34"></div>
+        
+          <div class="segment segment-35"></div>
+        
+          <div class="segment segment-36"></div>
+        
+          <div class="segment segment-37"></div>
+        
+          <div class="segment segment-38"></div>
+        
+          <div class="segment segment-39"></div>
+        
+          <div class="segment segment-40"></div>
+        
+          <div class="segment segment-41"></div>
+        
+          <div class="segment segment-42"></div>
+        
+          <div class="segment segment-43"></div>
+        
+          <div class="segment segment-44"></div>
+        
+          <div class="segment segment-45"></div>
+        
+          <div class="segment segment-46"></div>
+        
+          <div class="segment segment-47"></div>
+        
+          <div class="segment segment-48"></div>
+        
+          <div class="segment segment-49"></div>
+        
+          <div class="segment segment-50"></div>
+        
+          <div class="segment segment-51"></div>
+        
+          <div class="segment segment-52"></div>
+        
+          <div class="segment segment-53"></div>
+        
+          <div class="segment segment-54"></div>
+        
+          <div class="segment segment-55"></div>
+        
+          <div class="segment segment-56"></div>
+        
+          <div class="segment segment-57"></div>
+        
+          <div class="segment segment-58"></div>
+        
+          <div class="segment segment-59"></div>
+        
+          <div class="segment segment-60"></div>
+        
+          <div class="segment segment-61"></div>
+        
+          <div class="segment segment-62"></div>
+        
+          <div class="segment segment-63"></div>
+        
+          <div class="segment segment-64"></div>
+        
+          <div class="segment segment-65"></div>
+        
+          <div class="segment segment-66"></div>
+        
+          <div class="segment segment-67"></div>
+        
+          <div class="segment segment-68"></div>
+        
+          <div class="segment segment-69"></div>
+        
+          <div class="segment segment-70"></div>
+        
+          <div class="segment segment-71"></div>
+        
+          <div class="segment segment-72"></div>
+        
+          <div class="segment segment-73"></div>
+        
+          <div class="segment segment-74"></div>
+        
+          <div class="segment segment-75"></div>
+        
+          <div class="segment segment-76"></div>
+        
+          <div class="segment segment-77"></div>
+        
+          <div class="segment segment-78"></div>
+        
+          <div class="segment segment-79"></div>
+        
+          <div class="segment segment-80"></div>
+        
+          <div class="segment segment-81"></div>
+        
+          <div class="segment segment-82"></div>
+        
+          <div class="segment segment-83"></div>
+        
+          <div class="segment segment-84"></div>
+        
+          <div class="segment segment-85"></div>
+        
+          <div class="segment segment-86"></div>
+        
+          <div class="segment segment-87"></div>
+        
+          <div class="segment segment-88"></div>
+        
+          <div class="segment segment-89"></div>
+        
+          <div class="segment segment-90"></div>
+        
+          <div class="segment segment-91"></div>
+        
+          <div class="segment segment-92"></div>
+        
+          <div class="segment segment-93"></div>
+        
+          <div class="segment segment-94"></div>
+        
+          <div class="segment segment-95"></div>
+        
+          <div class="segment segment-96"></div>
+        
+          <div class="segment segment-97"></div>
+        
+          <div class="segment segment-98"></div>
+        
+          <div class="segment segment-99"></div>
+        
+          <div class="segment segment-100"></div>
+        
+          <div class="segment segment-101"></div>
+        
+          <div class="segment segment-102"></div>
+        
+          <div class="segment segment-103"></div>
+        
+          <div class="segment segment-104"></div>
+        
+          <div class="segment segment-105"></div>
+        
+          <div class="segment segment-106"></div>
+        
+          <div class="segment segment-107"></div>
+        
+          <div class="segment segment-108"></div>
+        
+          <div class="segment segment-109"></div>
+        
+          <div class="segment segment-110"></div>
+        
+          <div class="segment segment-111"></div>
+        
+          <div class="segment segment-112"></div>
+        
+          <div class="segment segment-113"></div>
+        
+          <div class="segment segment-114"></div>
+        
+          <div class="segment segment-115"></div>
+        
+          <div class="segment segment-116"></div>
+        
+          <div class="segment segment-117"></div>
+        
+          <div class="segment segment-118"></div>
+        
+          <div class="segment segment-119"></div>
+        
+          <div class="segment segment-120"></div>
+        
+      </div>
+
+      <div class="pins">
+        
+          <div class="pin pin-1"></div>
+        
+          <div class="pin pin-2"></div>
+        
+          <div class="pin pin-3"></div>
+        
+          <div class="pin pin-4"></div>
+        
+          <div class="pin pin-5"></div>
+        
+          <div class="pin pin-6"></div>
+        
+          <div class="pin pin-7"></div>
+        
+          <div class="pin pin-8"></div>
+        
+          <div class="pin pin-9"></div>
+        
+          <div class="pin pin-10"></div>
+        
+          <div class="pin pin-11"></div>
+        
+          <div class="pin pin-12"></div>
+        
+          <div class="pin pin-13"></div>
+        
+          <div class="pin pin-14"></div>
+        
+          <div class="pin pin-15"></div>
+        
+          <div class="pin pin-16"></div>
+        
+          <div class="pin pin-17"></div>
+        
+          <div class="pin pin-18"></div>
+        
+          <div class="pin pin-19"></div>
+        
+          <div class="pin pin-20"></div>
+        
+          <div class="pin pin-21"></div>
+        
+          <div class="pin pin-22"></div>
+        
+          <div class="pin pin-23"></div>
+        
+          <div class="pin pin-24"></div>
+        
+          <div class="pin pin-25"></div>
+        
+          <div class="pin pin-26"></div>
+        
+          <div class="pin pin-27"></div>
+        
+          <div class="pin pin-28"></div>
+        
+          <div class="pin pin-29"></div>
+        
+          <div class="pin pin-30"></div>
+        
+      </div>
+    </div>
+
+    <div class="slider">
+      <div class="retaining-ring"></div>
+      <div class="pull-tab-top"></div>
+      <div class="pull-tab-bottom"></div>
+    </div>
+
+    <div class="right-zipper">
+      <div class="segments">
+        
+          <div class="segment segment-1"></div>
+        
+          <div class="segment segment-2"></div>
+        
+          <div class="segment segment-3"></div>
+        
+          <div class="segment segment-4"></div>
+        
+          <div class="segment segment-5"></div>
+        
+          <div class="segment segment-6"></div>
+        
+          <div class="segment segment-7"></div>
+        
+          <div class="segment segment-8"></div>
+        
+          <div class="segment segment-9"></div>
+        
+          <div class="segment segment-10"></div>
+        
+          <div class="segment segment-11"></div>
+        
+          <div class="segment segment-12"></div>
+        
+          <div class="segment segment-13"></div>
+        
+          <div class="segment segment-14"></div>
+        
+          <div class="segment segment-15"></div>
+        
+          <div class="segment segment-16"></div>
+        
+          <div class="segment segment-17"></div>
+        
+          <div class="segment segment-18"></div>
+        
+          <div class="segment segment-19"></div>
+        
+          <div class="segment segment-20"></div>
+        
+          <div class="segment segment-21"></div>
+        
+          <div class="segment segment-22"></div>
+        
+          <div class="segment segment-23"></div>
+        
+          <div class="segment segment-24"></div>
+        
+          <div class="segment segment-25"></div>
+        
+          <div class="segment segment-26"></div>
+        
+          <div class="segment segment-27"></div>
+        
+          <div class="segment segment-28"></div>
+        
+          <div class="segment segment-29"></div>
+        
+          <div class="segment segment-30"></div>
+        
+          <div class="segment segment-31"></div>
+        
+          <div class="segment segment-32"></div>
+        
+          <div class="segment segment-33"></div>
+        
+          <div class="segment segment-34"></div>
+        
+          <div class="segment segment-35"></div>
+        
+          <div class="segment segment-36"></div>
+        
+          <div class="segment segment-37"></div>
+        
+          <div class="segment segment-38"></div>
+        
+          <div class="segment segment-39"></div>
+        
+          <div class="segment segment-40"></div>
+        
+          <div class="segment segment-41"></div>
+        
+          <div class="segment segment-42"></div>
+        
+          <div class="segment segment-43"></div>
+        
+          <div class="segment segment-44"></div>
+        
+          <div class="segment segment-45"></div>
+        
+          <div class="segment segment-46"></div>
+        
+          <div class="segment segment-47"></div>
+        
+          <div class="segment segment-48"></div>
+        
+          <div class="segment segment-49"></div>
+        
+          <div class="segment segment-50"></div>
+        
+          <div class="segment segment-51"></div>
+        
+          <div class="segment segment-52"></div>
+        
+          <div class="segment segment-53"></div>
+        
+          <div class="segment segment-54"></div>
+        
+          <div class="segment segment-55"></div>
+        
+          <div class="segment segment-56"></div>
+        
+          <div class="segment segment-57"></div>
+        
+          <div class="segment segment-58"></div>
+        
+          <div class="segment segment-59"></div>
+        
+          <div class="segment segment-60"></div>
+        
+          <div class="segment segment-61"></div>
+        
+          <div class="segment segment-62"></div>
+        
+          <div class="segment segment-63"></div>
+        
+          <div class="segment segment-64"></div>
+        
+          <div class="segment segment-65"></div>
+        
+          <div class="segment segment-66"></div>
+        
+          <div class="segment segment-67"></div>
+        
+          <div class="segment segment-68"></div>
+        
+          <div class="segment segment-69"></div>
+        
+          <div class="segment segment-70"></div>
+        
+          <div class="segment segment-71"></div>
+        
+          <div class="segment segment-72"></div>
+        
+          <div class="segment segment-73"></div>
+        
+          <div class="segment segment-74"></div>
+        
+          <div class="segment segment-75"></div>
+        
+          <div class="segment segment-76"></div>
+        
+          <div class="segment segment-77"></div>
+        
+          <div class="segment segment-78"></div>
+        
+          <div class="segment segment-79"></div>
+        
+          <div class="segment segment-80"></div>
+        
+          <div class="segment segment-81"></div>
+        
+          <div class="segment segment-82"></div>
+        
+          <div class="segment segment-83"></div>
+        
+          <div class="segment segment-84"></div>
+        
+          <div class="segment segment-85"></div>
+        
+          <div class="segment segment-86"></div>
+        
+          <div class="segment segment-87"></div>
+        
+          <div class="segment segment-88"></div>
+        
+          <div class="segment segment-89"></div>
+        
+          <div class="segment segment-90"></div>
+        
+          <div class="segment segment-91"></div>
+        
+          <div class="segment segment-92"></div>
+        
+          <div class="segment segment-93"></div>
+        
+          <div class="segment segment-94"></div>
+        
+          <div class="segment segment-95"></div>
+        
+          <div class="segment segment-96"></div>
+        
+          <div class="segment segment-97"></div>
+        
+          <div class="segment segment-98"></div>
+        
+          <div class="segment segment-99"></div>
+        
+          <div class="segment segment-100"></div>
+        
+          <div class="segment segment-101"></div>
+        
+          <div class="segment segment-102"></div>
+        
+          <div class="segment segment-103"></div>
+        
+          <div class="segment segment-104"></div>
+        
+          <div class="segment segment-105"></div>
+        
+          <div class="segment segment-106"></div>
+        
+          <div class="segment segment-107"></div>
+        
+          <div class="segment segment-108"></div>
+        
+          <div class="segment segment-109"></div>
+        
+          <div class="segment segment-110"></div>
+        
+          <div class="segment segment-111"></div>
+        
+          <div class="segment segment-112"></div>
+        
+          <div class="segment segment-113"></div>
+        
+          <div class="segment segment-114"></div>
+        
+          <div class="segment segment-115"></div>
+        
+          <div class="segment segment-116"></div>
+        
+          <div class="segment segment-117"></div>
+        
+          <div class="segment segment-118"></div>
+        
+          <div class="segment segment-119"></div>
+        
+          <div class="segment segment-120"></div>
+        
+      </div>
+      <div class="pins">
+        
+          <div class="pin pin-1"></div>
+        
+          <div class="pin pin-2"></div>
+        
+          <div class="pin pin-3"></div>
+        
+          <div class="pin pin-4"></div>
+        
+          <div class="pin pin-5"></div>
+        
+          <div class="pin pin-6"></div>
+        
+          <div class="pin pin-7"></div>
+        
+          <div class="pin pin-8"></div>
+        
+          <div class="pin pin-9"></div>
+        
+          <div class="pin pin-10"></div>
+        
+          <div class="pin pin-11"></div>
+        
+          <div class="pin pin-12"></div>
+        
+          <div class="pin pin-13"></div>
+        
+          <div class="pin pin-14"></div>
+        
+          <div class="pin pin-15"></div>
+        
+          <div class="pin pin-16"></div>
+        
+          <div class="pin pin-17"></div>
+        
+          <div class="pin pin-18"></div>
+        
+          <div class="pin pin-19"></div>
+        
+          <div class="pin pin-20"></div>
+        
+          <div class="pin pin-21"></div>
+        
+          <div class="pin pin-22"></div>
+        
+          <div class="pin pin-23"></div>
+        
+          <div class="pin pin-24"></div>
+        
+          <div class="pin pin-25"></div>
+        
+          <div class="pin pin-26"></div>
+        
+          <div class="pin pin-27"></div>
+        
+          <div class="pin pin-28"></div>
+        
+          <div class="pin pin-29"></div>
+        
+          <div class="pin pin-30"></div>
+        
+      </div>
+    </div>
+
+
+  </div><!-- zipper end -->
+
+  <div class="percent">
+    <span id="number">1</span>%
+  </div>
+
+</div>
+<script type="text/javascript">
+	  document.addEventListener('DOMContentLoaded', function () {
+    var counter = setInterval(function() {
+      var numberElem = document.getElementById('number');
+      numberElem.innerHTML = parseInt(numberElem.innerHTML) + 1;
+      if ( parseInt(numberElem.innerHTML) == 100 ) {
+        clearInterval(counter);
+      }
+    }, 7500/98);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>closure</title>
+</head>
+<body>
+<script type="text/javascript">
+	;(function(){
+		var getClosure=function(){
+			var count=0;
+			var get=function(){
+				count++;
+				return count;
+			}
+			return get;
+		}
+
+		var counter=getClosure();
+		console.log(counter());
+		console.log(counter());
+		console.log(counter());
+	})()
+</script>
+</body>
+</html>
