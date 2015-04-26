@@ -8,7 +8,7 @@ var request = require("request");
 var cheerio = require("cheerio");
 var mkdirp = require('mkdirp');
 
-function getData(i) {
+function getData() {
 	//本地存储目录
 	var dir = './images';
 	//创建目录
@@ -23,9 +23,9 @@ function getData(i) {
 			var $ = cheerio.load(body);
 			$('.img img').each(function() {
 				var src = $(this).attr('src');
-				console.log('第'+i+'页'+'正在下载' + src);
+				console.log('正在下载' + src);
 				download(src, dir, Math.floor(Math.random() * 100000) + src.substr(-4, 4));
-				console.log('第'+i+'页'+'下载完成');
+				console.log('下载完成');
 			});
 		} else {
 			request.end();
@@ -38,10 +38,10 @@ function getData(i) {
 		});
 	};
 }
-for (var i = 1; i <= 10; i++) {
+// for (var i = 16; i <= 20; i++) {
 
 	var opts = {
-		url: 'http://me2-sex.lofter.com/tag/美女摄影?page=i',
+		url: 'http://sexy.faceks.com/post/2c9c66_61c2cf5',
 		header: {
 			'Connection':'keep-alive',
 			'User-Agent':'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36',
@@ -49,5 +49,5 @@ for (var i = 1; i <= 10; i++) {
 
 		}
 	}
-	getData(i);
-}
+	getData();
+// }
