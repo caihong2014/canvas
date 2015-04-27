@@ -1,132 +1,9 @@
-
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>HTML5 Zipper</title>
-		<meta charset="utf-8">
-		<meta name="description" content="This is my really, really, REALLY exciting Zipper animation">
-
-		<script src="moudle/zepto.min.js"></script>
-		<style type="text/css">
-
-/* CANVAS */
-#containerZipper { width:100%; height: 100%; }
-#canvasback { position: absolute;  z-index: 998; }
-#canvas { position: absolute; z-index: 999; }
-#overlapcanvas { position: absolute; z-index: 1000; }
-
-
-/* SITE */
-html, body { 
-    height:100% 
-}
-body { background:url(images/409.jpg) no-repeat center center; padding:0; margin:0; overflow: hidden; }
-input[type=radio] { background: white; color: yellow; -webkit-appearance: none; width: 10px; height: 10px; }
-input[type=radio]:checked { background: black; }
-
-h1 { font-family: helvetica; font-size: 90px; color: white; text-shadow: 4px 4px 6px #000; margin:0; }
-h2 { font-family: helvetica; font-size: 44px; color: white; text-shadow: 2px 2px 3px #000; margin:0; }
-h3 { font-family: helvetica; font-size: 20px; color: white; margin:0; text-transform: uppercase; }
-h4 { font-family: verdana; font-size: 14px; color: darkgray; margin:0; padding-left: 10px; }
-h4.first { padding-left: 0px !important; }
-.site-div { position: absolute; z-index: 1; width:100%; }
-.header { position: relative; height: 105px; background-color: #ccc; }
-.header-band { overflow: hidden; position: absolute; width:100%; bottom: 5px; height: 51px;  background: url('../img/01.png'); }
-
-.banner { text-align: center; position: relative; height: 500px; width: 100%; background: url('../img/background.jpg'); background-position: center center; }
-.banner-title { position: relative; top: 20px; }
-.bannerback { height: 100%; z-index: -1 }
-
-.footer { height: 50px; background-color: #ccc;}
-
-/* PALETTE */
-.palette-div { text-align: center; padding: 0; margin: 0; position: absolute; bottom: 20px; right: 20px; width: 420px; height: 470px; border: 2px solid black; z-index: 1100; }
-.palette { padding: 13px; margin: 0; list-style: none; position: absolute; }
-.palette li { margin: 1px; margin-bottom: 1px; width: 30px; height: 30px; display: inline-block; cursor: pointer; border: 1px solid black; }
-.block  { background: #333; filter:alpha(opacity=60); /* IE */ -moz-opacity:0.6; /* Mozilla */ opacity: 0.6; /* CSS3 */ position: absolute; top: 0; left: 0; height: 100%; width:100%; }
-.red { background-color: #ff0000; }
-.blue { background-color: #0000ff; }
-.green { background-color: #006600; }
-.gray { background-color: gray; }
-.yellow { background-color: #ffff00; }
-.white { background-color: #ffffff; }
-.lightgray { background-color: #cccccc; }
-.gray { background-color: #999999; }
-.middlegray { background-color: #666666; }
-.darkgray { background-color: #333333; }
-.black { background-color: #000000; }
-.orange { background-color: #ff9900; }
-.texture1 { background: url('../img/tex1.jpg'); }
-.texture2 { background: url('../img/tex2.jpg'); }
-.texture3 { background: url('../img/tex3.jpg'); }
-.placeholder { clear: both; width: 100% !important; height: 12px !important; border:0 !important; text-align: left; color: white; font-family: verdana; font-size: 11px;}
-#autoOpen { margin-top: 10px; }
-#closePalette { position: absolute; right: 5px; margin-bottom: 3px; }
-#reloadPage { position: absolute; right: 26px; bottom: 25px; z-index: 1099; }
-
-
-
-
-		</style>
-			
-		<script type="text/javascript">
-
-			// zipper default settings
-			var backcolor = '#ffbebe';
-			var backImage = '';
-			var lineColor = '#552604';   // default
-		    var toothFill = '#552604';  // default
-			var pullFill = '#552604'; // default
-			var CursorFill = '#999999';  // default
-			var endingsFill = '#552604'; // default
-			var autoOpen = false;
-			var autoOpenSpeed = 100; // from 1 to 1000
-			var noAnimation = false;
-			var fadeOutAnimation = true;
-			var moveOutAnimation = false;
-			var fadeOutDelay = 1700; // milliseconds
-			//var zipperHeight = 1000;
-			
-
-			$(function() {
-				// INITIALIZATION ROUTINE
-				if (backImage != '') { 
-					var backObj = new Image();
-					backObj.src = backImage;
-					backObj.onload = function() {
-						init();
-						fillPattern = ctx.createPattern(backObj, "repeat");
-					}
-				} else {
-					init();
-				}
-		});
-
-		</script>
-
-		<script type="text/javascript">
-
- 
-			$(function() {
-
-				$('.site-div').width(window.innerWidth - 17);
-				
-				$(window).resize(function() {
-					$(".site-div").width($(window).width() - 17);
-				});
-
-				// initial scroll positioning
-				$(window).one("scroll",function() {
-					document.body.scrollTop = document.documentElement.scrollTop = 0;
-					
-				});
-
-			});
-
-
-		</script>
-
-		<script type="text/javascript">
+/*
+ * Developer : Claudio Ferraro (claudioferraro@mail.ru)
+ * Date : 26/03/2013
+ * All code (c)2013 Sunbyte inc. (Latvia) all rights reserved
+ * Version: 1.01
+ */
 
 var resizeTimer;
 $(window).resize(function() {
@@ -322,7 +199,7 @@ var finalRect = function(ctx, size) {
 	ctx.fillStyle = endingsFill;
 	ctx.fill();
 	ctx.lineWidth = 1;
-	// ctx.strokeStyle = ColorLuminance(colourNameToHex(endingsFill), -0.5);
+	ctx.strokeStyle = ColorLuminance(colourNameToHex(endingsFill), -0.5);
 	ctx.stroke();
 }
 
@@ -330,7 +207,7 @@ var finalRect = function(ctx, size) {
 var BaseCursor = function(ctxOver) {
 	ctxOver.save();
 	ctxOver.fillStyle = CursorFill;
-	// ctxOver.strokeStyle = ColorLuminance(colourNameToHex(CursorFill), -0.5);
+	ctxOver.strokeStyle = ColorLuminance(colourNameToHex(CursorFill), -0.5);
 	ctxOver.lineWidth = 0.25;
 	ctxOver.miterLimit = 3.8636999130249023;
 	ctxOver.beginPath();
@@ -370,11 +247,11 @@ var PullPart = function(ctxOver, color) {
 	ctxOver.save();
 	
 	if (color != null) {
-		// ctxOver.fillStyle = ColorLuminance(colourNameToHex(pullFill), -0.2);
+		ctxOver.fillStyle = ColorLuminance(colourNameToHex(pullFill), -0.2);
 	} else {
 		ctxOver.fillStyle = pullFill;
 	}
-	// ctxOver.strokeStyle = ColorLuminance(colourNameToHex(pullFill), -0.5);
+	ctxOver.strokeStyle = ColorLuminance(colourNameToHex(pullFill), -0.5);
 	ctxOver.beginPath();
 	ctxOver.moveTo(7.254,2.957);
 	ctxOver.lineTo(6.004,11.738);
@@ -428,7 +305,7 @@ var Hook = function(ctxOver) {
 
 var Tooth = function(ctx) {
 	ctx.fillStyle = toothFill;
-	// ctx.strokeStyle = ColorLuminance(colourNameToHex(toothFill), -0.5);
+	ctx.strokeStyle = ColorLuminance(colourNameToHex(toothFill), -0.5);
 	ctx.lineWidth = 0.5799999833106995;
 	ctx.miterLimit = 3.8636999130249023;
 	ctx.beginPath();
@@ -472,7 +349,7 @@ var Tooth = function(ctx) {
 
 var ToothDX = function(ctx) {
 	ctx.fillStyle = toothFill;
-	// ctx.strokeStyle = ColorLuminance(colourNameToHex(toothFill), -0.5);
+	ctx.strokeStyle = ColorLuminance(colourNameToHex(toothFill), -0.5);
 	ctx.lineWidth = 0.5799999833106995;
 	ctx.miterLimit = 3.8636999130249023;
 	ctx.beginPath();
@@ -1303,43 +1180,43 @@ function ColorLuminance(hex, lum) {
 	return rgb;
 }
 
-// function colourNameToHex(colour)
-// {
-// 	if (colour.indexOf("#") == -1) {
+function colourNameToHex(colour)
+{
+	if (colour.indexOf("#") == -1) {
 	
-// 		var colours = {"aliceblue":"#f0f8ff","antiquewhite":"#faebd7","aqua":"#00ffff","aquamarine":"#7fffd4","azure":"#f0ffff",
-// 		"beige":"#f5f5dc","bisque":"#ffe4c4","black":"#000000","blanchedalmond":"#ffebcd","blue":"#0000ff","blueviolet":"#8a2be2","brown":"#a52a2a","burlywood":"#deb887",
-// 		"cadetblue":"#5f9ea0","chartreuse":"#7fff00","chocolate":"#d2691e","coral":"#ff7f50","cornflowerblue":"#6495ed","cornsilk":"#fff8dc","crimson":"#dc143c","cyan":"#00ffff",
-// 		"darkblue":"#00008b","darkcyan":"#008b8b","darkgoldenrod":"#b8860b","darkgray":"#a9a9a9","darkgreen":"#006400","darkkhaki":"#bdb76b","darkmagenta":"#8b008b","darkolivegreen":"#556b2f",
-// 		"darkorange":"#ff8c00","darkorchid":"#9932cc","darkred":"#8b0000","darksalmon":"#e9967a","darkseagreen":"#8fbc8f","darkslateblue":"#483d8b","darkslategray":"#2f4f4f","darkturquoise":"#00ced1",
-// 		"darkviolet":"#9400d3","deeppink":"#ff1493","deepskyblue":"#00bfff","dimgray":"#696969","dodgerblue":"#1e90ff",
-// 		"firebrick":"#b22222","floralwhite":"#fffaf0","forestgreen":"#228b22","fuchsia":"#ff00ff",
-// 		"gainsboro":"#dcdcdc","ghostwhite":"#f8f8ff","gold":"#ffd700","goldenrod":"#daa520","gray":"#808080","green":"#008000","greenyellow":"#adff2f",
-// 		"honeydew":"#f0fff0","hotpink":"#ff69b4",
-// 		"indianred ":"#cd5c5c","indigo ":"#4b0082","ivory":"#fffff0","khaki":"#f0e68c",
-// 		"lavender":"#e6e6fa","lavenderblush":"#fff0f5","lawngreen":"#7cfc00","lemonchiffon":"#fffacd","lightblue":"#add8e6","lightcoral":"#f08080","lightcyan":"#e0ffff","lightgoldenrodyellow":"#fafad2",
-// 		"lightgrey":"#d3d3d3","lightgreen":"#90ee90","lightpink":"#ffb6c1","lightsalmon":"#ffa07a","lightseagreen":"#20b2aa","lightskyblue":"#87cefa","lightslategray":"#778899","lightsteelblue":"#b0c4de",
-// 		"lightyellow":"#ffffe0","lime":"#00ff00","limegreen":"#32cd32","linen":"#faf0e6",
-// 		"magenta":"#ff00ff","maroon":"#800000","mediumaquamarine":"#66cdaa","mediumblue":"#0000cd","mediumorchid":"#ba55d3","mediumpurple":"#9370d8","mediumseagreen":"#3cb371","mediumslateblue":"#7b68ee",
-// 		"mediumspringgreen":"#00fa9a","mediumturquoise":"#48d1cc","mediumvioletred":"#c71585","midnightblue":"#191970","mintcream":"#f5fffa","mistyrose":"#ffe4e1","moccasin":"#ffe4b5",
-// 		"navajowhite":"#ffdead","navy":"#000080",
-// 		"oldlace":"#fdf5e6","olive":"#808000","olivedrab":"#6b8e23","orange":"#ffa500","orangered":"#ff4500","orchid":"#da70d6",
-// 		"palegoldenrod":"#eee8aa","palegreen":"#98fb98","paleturquoise":"#afeeee","palevioletred":"#d87093","papayawhip":"#ffefd5","peachpuff":"#ffdab9","peru":"#cd853f","pink":"#ffc0cb","plum":"#dda0dd","powderblue":"#b0e0e6","purple":"#800080",
-// 		"red":"#ff0000","rosybrown":"#bc8f8f","royalblue":"#4169e1",
-// 		"saddlebrown":"#8b4513","salmon":"#fa8072","sandybrown":"#f4a460","seagreen":"#2e8b57","seashell":"#fff5ee","sienna":"#a0522d","silver":"#c0c0c0","skyblue":"#87ceeb","slateblue":"#6a5acd","slategray":"#708090","snow":"#fffafa","springgreen":"#00ff7f","steelblue":"#4682b4",
-// 		"tan":"#d2b48c","teal":"#008080","thistle":"#d8bfd8","tomato":"#ff6347","turquoise":"#40e0d0",
-// 		"violet":"#ee82ee",
-// 		"wheat":"#f5deb3","white":"#ffffff","whitesmoke":"#f5f5f5",
-// 		"yellow":"#ffff00","yellowgreen":"#9acd32"};
+		var colours = {"aliceblue":"#f0f8ff","antiquewhite":"#faebd7","aqua":"#00ffff","aquamarine":"#7fffd4","azure":"#f0ffff",
+		"beige":"#f5f5dc","bisque":"#ffe4c4","black":"#000000","blanchedalmond":"#ffebcd","blue":"#0000ff","blueviolet":"#8a2be2","brown":"#a52a2a","burlywood":"#deb887",
+		"cadetblue":"#5f9ea0","chartreuse":"#7fff00","chocolate":"#d2691e","coral":"#ff7f50","cornflowerblue":"#6495ed","cornsilk":"#fff8dc","crimson":"#dc143c","cyan":"#00ffff",
+		"darkblue":"#00008b","darkcyan":"#008b8b","darkgoldenrod":"#b8860b","darkgray":"#a9a9a9","darkgreen":"#006400","darkkhaki":"#bdb76b","darkmagenta":"#8b008b","darkolivegreen":"#556b2f",
+		"darkorange":"#ff8c00","darkorchid":"#9932cc","darkred":"#8b0000","darksalmon":"#e9967a","darkseagreen":"#8fbc8f","darkslateblue":"#483d8b","darkslategray":"#2f4f4f","darkturquoise":"#00ced1",
+		"darkviolet":"#9400d3","deeppink":"#ff1493","deepskyblue":"#00bfff","dimgray":"#696969","dodgerblue":"#1e90ff",
+		"firebrick":"#b22222","floralwhite":"#fffaf0","forestgreen":"#228b22","fuchsia":"#ff00ff",
+		"gainsboro":"#dcdcdc","ghostwhite":"#f8f8ff","gold":"#ffd700","goldenrod":"#daa520","gray":"#808080","green":"#008000","greenyellow":"#adff2f",
+		"honeydew":"#f0fff0","hotpink":"#ff69b4",
+		"indianred ":"#cd5c5c","indigo ":"#4b0082","ivory":"#fffff0","khaki":"#f0e68c",
+		"lavender":"#e6e6fa","lavenderblush":"#fff0f5","lawngreen":"#7cfc00","lemonchiffon":"#fffacd","lightblue":"#add8e6","lightcoral":"#f08080","lightcyan":"#e0ffff","lightgoldenrodyellow":"#fafad2",
+		"lightgrey":"#d3d3d3","lightgreen":"#90ee90","lightpink":"#ffb6c1","lightsalmon":"#ffa07a","lightseagreen":"#20b2aa","lightskyblue":"#87cefa","lightslategray":"#778899","lightsteelblue":"#b0c4de",
+		"lightyellow":"#ffffe0","lime":"#00ff00","limegreen":"#32cd32","linen":"#faf0e6",
+		"magenta":"#ff00ff","maroon":"#800000","mediumaquamarine":"#66cdaa","mediumblue":"#0000cd","mediumorchid":"#ba55d3","mediumpurple":"#9370d8","mediumseagreen":"#3cb371","mediumslateblue":"#7b68ee",
+		"mediumspringgreen":"#00fa9a","mediumturquoise":"#48d1cc","mediumvioletred":"#c71585","midnightblue":"#191970","mintcream":"#f5fffa","mistyrose":"#ffe4e1","moccasin":"#ffe4b5",
+		"navajowhite":"#ffdead","navy":"#000080",
+		"oldlace":"#fdf5e6","olive":"#808000","olivedrab":"#6b8e23","orange":"#ffa500","orangered":"#ff4500","orchid":"#da70d6",
+		"palegoldenrod":"#eee8aa","palegreen":"#98fb98","paleturquoise":"#afeeee","palevioletred":"#d87093","papayawhip":"#ffefd5","peachpuff":"#ffdab9","peru":"#cd853f","pink":"#ffc0cb","plum":"#dda0dd","powderblue":"#b0e0e6","purple":"#800080",
+		"red":"#ff0000","rosybrown":"#bc8f8f","royalblue":"#4169e1",
+		"saddlebrown":"#8b4513","salmon":"#fa8072","sandybrown":"#f4a460","seagreen":"#2e8b57","seashell":"#fff5ee","sienna":"#a0522d","silver":"#c0c0c0","skyblue":"#87ceeb","slateblue":"#6a5acd","slategray":"#708090","snow":"#fffafa","springgreen":"#00ff7f","steelblue":"#4682b4",
+		"tan":"#d2b48c","teal":"#008080","thistle":"#d8bfd8","tomato":"#ff6347","turquoise":"#40e0d0",
+		"violet":"#ee82ee",
+		"wheat":"#f5deb3","white":"#ffffff","whitesmoke":"#f5f5f5",
+		"yellow":"#ffff00","yellowgreen":"#9acd32"};
 
-// 		if (typeof colours[colour.toLowerCase()] != 'undefined')
-// 			return colours[colour.toLowerCase()];
+		if (typeof colours[colour.toLowerCase()] != 'undefined')
+			return colours[colour.toLowerCase()];
 
-// 		} else {
-// 			return colour;
-// 		}
-// 	return false;
-// }
+		} else {
+			return colour;
+		}
+	return false;
+}
 
 var OpenStep = 10;
 var OpenIndex = 0;
@@ -1378,22 +1255,3 @@ function animateZipper() {
 }
 
 
-		</script>
-
-
-	</head>
-	
-	
-	<body>
-	<!-- ZIPPER -->
-	<div id="containerZipper">
-		<canvas id="canvasback"></canvas>
-		<canvas id="canvas"></canvas>
-		<canvas id="overlapcanvas"></canvas>
-	</div>
-	<!-- END ZIPPER -->
-
-
-	</body>
-
-</html>

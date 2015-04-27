@@ -38,7 +38,7 @@ function getData(i) {
 		});
 	};
 }
-for (var i = 1; i <= 10; i++) {
+for (var i = 1; i <= 4; i++) {
 
 	var opts = {
 		url: 'http://me2-sex.lofter.com/tag/美女摄影?page=i',

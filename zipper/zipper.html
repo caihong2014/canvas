@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>zipper</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<style type="text/css">
+	html{font-size: 20px;}
+	body {background: #ddd; width: 100%; height: 100%; overflow: hidden;}
+	.main {margin:0 auto; max-width:48rem; height:30rem; background: url(../520girl02.png) no-repeat center center; background-size:cover; position: relative;}
+	.zipperL,.zipperR{ width: 100px; overflow: hidden; position: absolute; top:43%;}
+	.zipperL{left: 36%;}
+	.zipperR{left: 46%;}	
+	.zipperLeft,.zipperRight{width: 580px; height: 30rem; }
+	.zipperLeft{margin-left:-510px; background: #ffbebe; border-right:10px solid #552604; height: 14rem; }
+	.zipperRight{margin-left:26px; background: #ffbebe; border-left:10px solid #552604; height: 14rem; }
+	.zip{position: absolute; margin-left:0.5rem; width: 1rem; height: 580px; left: 50%; top:20px; z-index: 3; opacity: 0.5; /*background: red;*/}		
+
+	</style>
+
+</head>
+<body>
+	<div class="main clearfix">
+		<div class="zipperL">
+			<div class="zipperLeft"></div>
+		</div>
+	  	<div class="zip"></div>
+	  	<div class="zipperR">
+	  		<div class="zipperRight"></div>
+	  	</div>
+	</div>
+<script type="text/javascript" src="zepto.min.js"></script>	
+<script type="text/javascript">
+	$(function(){
+		var ZIPPER={
+			init:function(){
+				var self=this;
+				self.bindEvent();
+			},
+			bindEvent:function(){
+				var oZip=$(".zip").offset().top;
+				console.log(oZip);
+				$(".zip").on("touchstart",function(e){
+					
+				})
+				$(".zip").on("touchmove",function(e){
+						var x=0;
+						var y=0;
+						x = e.touches[0].pageX;
+						y = e.touches[0].pageY;
+						console.log(x,y);
+					$(".zipperLeft").css("border-top-right-radius",y-258);
+					$(".zipperRight").css("border-top-left-radius",y-258);
+					// $(".zip").css("top",380-y);
+				})
+				$(".zip").on("touchend",function(){
+					// e.preventDefault();
+				})
+			}
+
+		}
+
+		ZIPPER.init();
+	})
+</script>
+</body>
+</html>

@@ -21,8 +21,8 @@ var opts = {
 request(opts, function(error, response, body) {
 	if (!error && response.statusCode == 200) {
 		var $ = cheerio.load(body);
-		console.log('success01');
-		$.find('.block').each(function() {                 //method find 这块有些问题 ！！！
+		console.log(body);
+		$('.block').each(function() {                 //method find 这块有些问题 ！！！
 			console.log('success02');
 				var title = $(this).find(".detail").text();
 				var author = $(this).find(".author").text();
