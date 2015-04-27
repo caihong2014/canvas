@@ -109,7 +109,7 @@ emitter.on('someEvent',function(arg1,arg2){
 
 emitter.emit('someEvent','lee',1990);
 
-
+//继承EventEmitter  大多数的时候我们并会直接使用这个，而是在对象中继承他。
 
 
 
