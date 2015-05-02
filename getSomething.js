@@ -38,14 +38,10 @@ function getData() {
 		});
 	};
 }
-<<<<<<< HEAD
-for (var i = 1; i <= 4; i++) {
-=======
-// for (var i = 16; i <= 20; i++) {
->>>>>>> a743719bd114a178784bb86290096c9be44161ca
+
 
 	var opts = {
-		url: 'http://sexy.faceks.com/post/2c9c66_61c2cf5',
+		url: 'http://sexy.faceks.com/post/2c9c66_6a96829',
 		header: {
 			'Connection':'keep-alive',
 			'User-Agent':'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36',
@@ -54,4 +50,3 @@ for (var i = 1; i <= 4; i++) {
 		}
 	}
 	getData();
-// }
