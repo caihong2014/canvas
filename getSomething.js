@@ -41,7 +41,7 @@ function getData() {
 
 
 	var opts = {
-		url: 'http://sexy.faceks.com/post/2c9c66_6a96829',
+		url: 'http://sexy.faceks.com/post/2c9c66_6a006f0',
 		header: {
 			'Connection':'keep-alive',
 			'User-Agent':'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36',

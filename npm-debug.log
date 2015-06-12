@@ -1,25 +1,25 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'd:\\nodejs\\node.exe',
-1 verbose cli   'd:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'link',
-1 verbose cli   'express' ]
-2 info using npm@1.4.28
-3 info using node@v0.10.35
-4 verbose node_modules\express unbuild
-5 verbose link symlinking C:\Users\nan\AppData\Roaming\npm\node_modules\express to d:\canvas\node_modules\express
-6 error Error: EPERM, symlink 'C:\Users\nan\AppData\Roaming\npm\node_modules\express'
-6 error  { [Error: EPERM, symlink 'C:\Users\nan\AppData\Roaming\npm\node_modules\express']
-6 error   errno: 50,
-6 error   code: 'EPERM',
-6 error   path: 'C:\\Users\\nan\\AppData\\Roaming\\npm\\node_modules\\express' }
-7 error Please try running this command again as root/Administrator.
-8 error System Windows_NT 6.2.9200
-9 error command "d:\\nodejs\\node.exe" "d:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "link" "express"
-10 error cwd d:\canvas
-11 error node -v v0.10.35
-12 error npm -v 1.4.28
-13 error path C:\Users\nan\AppData\Roaming\npm\node_modules\express
-14 error code EPERM
-15 error errno 50
-16 error stack Error: EPERM, symlink 'C:\Users\nan\AppData\Roaming\npm\node_modules\express'
-17 verbose exit [ 50, true ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@2.7.6
+3 info using node@v0.12.2
+4 verbose node symlink /usr/local/bin/node
+5 verbose stack Error: missing script: start
+5 verbose stack     at run (/usr/local/lib/node_modules/npm/lib/run-script.js:165:19)
+5 verbose stack     at /usr/local/lib/node_modules/npm/lib/run-script.js:81:5
+5 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:345:5
+5 verbose stack     at checkBinReferences_ (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:309:45)
+5 verbose stack     at final (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:343:3)
+5 verbose stack     at then (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:113:5)
+5 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:300:12
+5 verbose stack     at evalmachine.<anonymous>:334:14
+5 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+5 verbose stack     at FSReqWrap.oncomplete (evalmachine.<anonymous>:95:15)
+6 verbose cwd /Users/nan/Documents/canvas
+7 error Darwin 14.3.0
+8 error argv "node" "/usr/local/bin/npm" "start"
+9 error node v0.12.2
+10 error npm  v2.7.6
+11 error missing script: start
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]

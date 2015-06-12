@@ -1,0 +1,9 @@
+{
+  "name": "get_some_data",
+  "version": "0.0.1",
+  "description": "Example Flux chat application primarily intended to explain the use of Dispatcher.waitFor().",
+  "repository": "https://github.com/Pearyman",
+  "dependencies": {
+    "avoscloud-sdk":"latest"
+  }
+}
