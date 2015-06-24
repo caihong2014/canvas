@@ -1,8 +1,12 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * react-native works
+ * author:nan
+ * time: 2015-6-24
+ * email: liyananhappy@sina.cn
  */
 var React = require('react-native');
+var AV = require('avoscloud-sdk').AV;
+AV.initialize("a5zjlnxgv6vhjnstba351wh97s3tc40hsot0no9j2b9wa153", "qhod8u5iijtvgm16g07gw1dm8f4mgmtqnthsloc7rqkyoxgb");
 var {
   AppRegistry,
   Image,
@@ -62,7 +66,7 @@ var iostest = React.createClass({
     return (
       <View style={styles.container}>
         <Text>
-          Loading movies...
+          正在加载中...
         </Text>
       </View>
     );
@@ -77,7 +81,6 @@ var iostest = React.createClass({
         />
         <View style={styles.rightContainer}>
           <Text style={styles.title}>{movie.title}</Text>
-          <Text style={styles.year}>{movie.year}</Text>
         </View>
       </View>
     );
@@ -90,22 +93,23 @@ var styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#fff',
+    borderBottomWidth:1,
+    borderBottomColor:'#fafafa'
   },
   rightContainer: {
     flex: 1,
   },
   title: {
-    fontSize: 20,
+    fontSize: 14,
     marginBottom: 8,
-    textAlign: 'center',
-  },
-  year: {
-    textAlign: 'center',
+    color:'#343434'
+
   },
   thumbnail: {
-    width: 53,
-    height: 81,
+    width: 70,
+    height: 70,
+    margin:15,
   },
   listView: {
     paddingTop: 20,
