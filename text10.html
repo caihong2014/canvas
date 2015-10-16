@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+<style type="text/css">
+	.posts li{
+		height: 60px;
+		border-top:1px solid #dfdfdf;
+		list-style: none;
+	}
+</style>
+</head>
+<body>
+	<ul class="posts">
+		<li page-id="1" objectid="">1<h5 class="read-times">0</h5></li>
+		<li page-id="2" objectid="">2<h5 class="read-times">0</h5></li>
+		<li page-id="3" objectid="">3<h5 class="read-times">0</h5></li>
+		<li page-id="4" objectid="">4<h5 class="read-times">0</h5></li>
+		<li page-id="5" objectid="">5<h5 class="read-times">0</h5></li>
+	</ul>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-mini-0.6.1.js"></script>
+<script>
+;(function(){
+   AV.initialize('a5zjlnxgv6vhjnstba351wh97s3tc40hsot0no9j2b9wa153', 'qhod8u5iijtvgm16g07gw1dm8f4mgmtqnthsloc7rqkyoxgb');
+
+	  AV.Query.doCloudQuery('select * from read_times', {
+		  success: function(result,e){
+		    //results 是查询返回的结果，AV.Object 列表
+		    var results = result.results;
+		    var page_ids=[];		
+		    for(var i=0; i<$(".posts li").length; i++){
+		    	var currentId=parseInt($(".posts li").eq(i).attr("page-id"));
+				for (var j=0; j<results.length; j++){
+					if(currentId==parseInt(results[j].attributes.page_id)){
+						$(".posts li").eq(i).attr("objectid",results[j].id);
+						$(".posts li .read-times").eq(i).text(results[j].attributes.read_num);
+					}
+				}
+			}
+		  },
+		  error: function(error){
+		    console.dir(error);
+		  }
+		});
+
+   $(".posts li").each(function(){
+    $(this).on("click",function(){
+       $(this).find(".read-times").text(parseInt($(this).find(".read-times").text())+1);
+	      var TestObject = AV.Object.extend('read_times');
+	   	  var testObject = new TestObject();
+	   	  var query = new AV.Query(TestObject);
+		  var currentNum=$(this).find(".read-times").text();
+		  var currentId=$(this).attr("page-id");
+		  var currentPageid=$(this).attr("objectid");
+
+	query.equalTo("page_id", currentId);
+
+	query.find({
+	  success: function(count) {
+	  	// 表中存在id 查找出对应的id下的objectid 然后进行更新操作
+	     if(count.length>0){
+	     	// 这个 id 是要修改条目的 objectId，你在生成这个实例并成功保存时可以获取到，请看前面的文档
+				query.get(currentPageid, {
+				    success: function(post) {
+				      // 成功，回调中可以取得这个 Post 对象的一个实例，然后就可以修改它了
+				      post.set('read_num', currentNum);
+				      post.save();
+				    },
+				    error: function(object, error) {
+				      // 失败了.
+				      console.log(object);
+				    }
+				});
+	     }else{
+	    // 新数据入库操作
+			      testObject.save({
+				  	read_num:currentNum,
+				  	page_id:currentId
+				}, {
+				  success: function(object) {
+				    // alert('LeanCloud works!');
+				  }
+				});
+	     }
+	  },
+	  error: function(error) {
+	    alert("Error: " + error.code + " " + error.message);
+	  }
+	});
+
+    })
+   })
+   
+	
+  })()
+</script>
+</body>
+</html>
