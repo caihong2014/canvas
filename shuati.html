@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	;(function(){
+		var nums=[0,0,1];
+		var moveZeroes = function() {
+		    for(var i=nums.length; i--;){
+		        if(nums[i]===0){
+		            nums.splice(i,1);
+		            nums.push(0);
+		        }
+		    }
+			console.log(nums);
+		};
+		moveZeroes();
+	})()
+</script>	
+</body>
+</html>
