@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>heart</title>
+<style type="text/css">
+	html{background: #29282e; color: #fff;}
+	body{text-align: center; font-size:8em;}
+	.words-box{position: relative; top: 200px;}
+	#heart{-webkit-transition: all 0.4s; transition: all 0.4s; color: #fff; font-weight: bold;}
+</style>
+</head>
+<body>
+	<div class="words-box">
+		<span>My</span>
+		<span id="heart">heart</span>
+		<span>beats</span>
+	</div>
+<script type="text/javascript">
+	;(function(window,document,undefined){
+		var h=document.getElementById("heart"),
+		    heartuptimer=setInterval(heartup,200),
+		    heartdowntimer=setInterval(heartdown,500);
+		function heartup(){
+			h.style.color="#f63";
+		}
+		function heartdown(){
+			h.style.color="#000";
+		}
+	})(window,document)
+</script>
+</body>
+</html>

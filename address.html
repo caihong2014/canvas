@@ -2,88 +2,22 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-<style type="text/css">
-  div{margin:0 auto; width:450px; height: 450px; background: pink; }
-</style>
+	<title>test</title>
 </head>
 <body>
- <div></div>
+<a href="http://baidu.com" onclick="this.style.color='red'; this.style.background='blue';return false;">百度</a>
 <script type="text/javascript">
-  // var person1={
-  //   toLocaleString:function(){
-  //     return "nikolaos";
-  //   },
-  //   toString:function(){
-  //     return "nicholas"
-  //   }
-  // }
+var a = 1;
+function b() {
+	var a = 2;
+	function c() {
+		console.log(a);
+	}
+	return c;
+	}
+b()(); //2
 
-  // var person2={
-  //   toLocaleString:function(){
-  //     return "grigorios";
-  //   },
-  //   toString:function(){
-  //     return "greg";
-  //   }
-  // }
 
-  // var people=[person1,person2];
-  // alert(people);    //nicholas, greg
-  // alert(people.toString());  // nicholas greg
-  // alert(people.toLocaleString()); //nikolaos, grigorios
-
-  // var a=function(){
-  //   console.log(2);
-  // }
-  // a();
-  // function a(){
-  //   console.log(1);
-  // }
-  // a();
-
-  // function tr42(){
-  //   var a2,b2;
-  //   a2={
-  //     "c":1
-  //   }
-  //   b2=a2;
-  //   a2.c=2;
-  //   console.log(b2.c);
-  //   a2={
-  //     "c":3
-  //   }
-  //   console.log(b2.c);
-  //   a2.c=4;
-  //   console.log(b2.c);
-
-  // }
-
-  // tr42();
-  // var a=10;
-  // function aaa(){
-  //   console.log(a); //10
-  //   var a=20;
-  // }
-  // aaa();
-  // var a=100;
-  // function aaa(){
-  //   console.log(a); //100
-  //   a=20;
-  // }
-  // aaa();
-  // function fn(){
-  //   var parm1=parm2=3;
-  // }
-  // fn();
-  // console.log(parm1);
-  // console.log(parm2);
- //  console.log（a);
- // var a=1;
- // console.log(a);
- // var host=location.host;
- // alert(host);
- // alert(host);
 </script>
 </body>
 </html>

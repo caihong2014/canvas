@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas_demo1</title>、
+
+<style type="text/css">
+	html,body{
+		margin:0;
+		padding:0;
+	}
+	canvas{
+		display: block;
+	}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script type="text/javascript">
+	;(function(){
+		'use strict';
+
+		function Circle(x,y,radius,hue){
+			this.x=x;
+			this.y=y;
+			this.radius=radius;
+			this.baseRadius=this.radius;
+			this.color='hsl(' + (hue) + ',' +'100%,50%)';
+			this.hue=hue;
+
+			//pic circle
+			var dx=this.x-c.width/2,
+			    dy=this.y-c.height/2;
+
+			this.dist=Math.sqrt(dx*dx+dy*dy);
+			this.position=Math.atan2(dy,dx);
+			this.a=this.position;
+		}
+
+
+		Circle.prototype={
+			constructor:Circle,
+			update:function(ctx){
+				this.position+=0.01;
+				this.a+=0.1;
+				this.color='hsl(' + (this.hue) + ',' +'100%,50%)';
+				this.hue+=1;
+				this.x=c.width/2+Math.cos(this.position)*this.dist;
+				this.y=c.height/2+Math.sin(this.position)*this.dist;
+				this.radius=Math.abs(this.baseRadius+Math.sin(this.a)*10);
+				//random draw circle
+				ctx.fillStyle=this.color;
+				ctx.beginPath();
+				ctx.arc(this.x,this.y,this.radius,0,Math.PI*2,false);
+				ctx.fill();
+			}
+		}
+
+
+
+		var c=document.getElementById("c"),
+		    ctx=c.getContext("2d");
+
+		c.width=window.innerWidth;
+		c.height=window.innerHeight;
+
+		var circles=[],
+			len=140,
+			originX=c.width/2,
+			originY=c.height/2,
+			radius=10,
+			hue=0,
+			i=0,
+			hueInc=360/len;
+
+
+		for(;i<len;i++){
+			var circle=new Circle(
+					originX+Math.cos(i*0.5)*(radius+radius*0.2*i),
+					originY+Math.sin(i*0.5)*(radius+radius*0.2*i),
+					0.3*i,
+					hue+=hueInc
+				);
+			circles.push(circle);
+		}
+
+		requestAnimationFrame(function loop(){
+			requestAnimationFrame(loop);
+
+			ctx.fillStyle="rgba(0,0,0,1)";
+			ctx.fillRect(0,0,c.width,c.height);
+
+			for(var i=0, l=circles.length; i<l; i++){
+				var object=circles[i];
+				object.update(ctx);
+			}
+		})
+
+
+	})()
+</script>	
+</body>
+</html>

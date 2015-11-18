@@ -82,9 +82,7 @@ function getTitle(j){
 				testObject.save({url_href:$(".link-button").eq(j).attr('href'),img_url:$(".link-button").eq(j).find('.preview-image').attr('src'),title:$(".link-button").eq(j).find('.title').text()}, {
 							success: function(url_href) {
 								console.log("获取标题成功");	
-								arr.push(url_href.attributes.url_href);
-								
-														
+								arr.push(url_href.attributes.url_href);													
 							}
 					});
 		} else {

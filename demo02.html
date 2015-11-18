@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loading random words</title>
+<style type="text/css">
+	html,body{margin:0; padding: 0;}
+	html{background: #000;}
+	body{background: #053d4e; overflow: hidden; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(6,0,255,0.3),rgba(255,0,0,0.3))}
+	.container{position: absolute; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); transform: translateY(-50%); width:100%;}
+	.right{float: left; color: #fff; width: 50%; text-align: right;}
+	.left{margin-top:40px; float: left; color: #7a7a7a; width:50%; text-align: right; -webkit-transform:scale(-1,1); transform:scale(-1,1);}
+	h1{font-size: 6vw;}
+	h4{font-size:3vw;}
+	h4:first-child{margin-bottom: -2vw;}
+	h4:last-child{margin-top: -1.7vw;}
+	h1,h4{-webkit-transition: opacity .25s; -moz-transition: opacity .25s; transition: opacity .25s;}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="right">
+		<h4 class="randoms"></h4>
+		<h1 class="randoms"></h1>
+		<h4 class="randoms"></h4>
+		<h1 class="randoms"></h1>
+		<h4 class="randoms"></h4>
+	</div>
+	<div class="left">
+		<h4 class="randoms"></h4>
+		<h1 class="randoms"></h1>
+		<h4 class="randoms"></h4>
+		<h1 class="randoms"></h1>
+		<h4 class="randoms"></h4>
+	</div>
+</div>
+<script type="text/javascript">
+	;(function(window,document,undefined){
+
+		var words=["东东枪","蜗牛","亿年","帅帅","A大","hello","world","fuck","you","loading"],
+			i=0;
+
+		window.addEventListener("load",function(){
+			var randoms=window.document.getElementsByClassName("randoms");
+			for(; i<randoms.length; i++){
+				changeWord(randoms[i]);
+			}
+		},false);
+
+		function changeWord(a){
+			a.style.opacity="0.1";
+			a.innerHTML=words[getRandomInt(0,words.length-1)];
+			setTimeout(function(){
+				a.style.opacity = "1";
+			},1000);
+
+			setTimeout(function(){
+				changeWord(a);
+			},getRandomInt(500,800));
+		}
+
+		function getRandomInt(min,max){
+			return Math.floor(Math.random()*(max-min+1))+min;
+		}
+
+	})(window,document)
+</script>	
+</body>
+</html>
