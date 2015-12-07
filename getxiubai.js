@@ -70,7 +70,6 @@ async.series([
 	],
 	function(err,result){
 		console.log('男哥 第一组更新完毕');
-		// request.end();
 	}
  );
 function getTitle(j){

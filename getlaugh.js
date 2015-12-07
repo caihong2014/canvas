@@ -28,9 +28,9 @@ request(opts, function(error, response, body) {
 				var TestObject = AV.Object.extend("dailyNews");
 				var testObject = new TestObject();
 				testObject.save({question:$(".article-header").text(),img_url:'http://ac-a5zjlnxg.clouddn.com/9bVyIixddpREs3SgJcEmgbPjY9VKwx3t0UfCO3Lp.jpg',content:$('.article-content').html(),title:$(".article-header").text(),big_img:'http://ac-a5zjlnxg.clouddn.com/9bVyIixddpREs3SgJcEmgbPjY9VKwx3t0UfCO3Lp.jpg',url_href:opts.url}, {
-							success: function(url_href) {
-								console.log("获取详情成功");	
-								// arr.push(url_href.attributes.url_href);
+						success: function(url_href) {
+						console.log("获取详情成功");	
+						// arr.push(url_href.attributes.url_href);
 								
 														
 							}
