@@ -26,7 +26,7 @@ var opts = {
 
 async.series([
 	function(callback){setTimeout(function(){callback(null,getTitle(0))},100)},
-	function(callback){setTimeout(function(){callback(null,getDetails(0))},1500)},
+	function(callback){setTimeout(function(){callback(null,getDetails(0))},100)},
 	function(callback){setTimeout(function(){callback(null,getTitle(1))},100)},
 	function(callback){setTimeout(function(){callback(null,getDetails(0))},1500)},
 	function(callback){setTimeout(function(){callback(null,getTitle(2))},100)},

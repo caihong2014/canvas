@@ -3,7 +3,7 @@
  *author:nan
  *time:2014-12-12
  */
-var fs = require('fs'); //文件读写模块
+var fs = require('fs'); 
 var request = require("request");
 var cheerio = require("cheerio");
 var mkdirp = require('mkdirp');
@@ -25,21 +25,19 @@ function getData() {
 				var src = $(this).attr('src');
 				console.log('正在下载' + src);
 				download(src, dir, Math.floor(Math.random() * 100000) + src.substr(-4, 4));
-				console.log('下载完成');
+				console.log('男哥，下载完成 ：）');
 			});
 		} else {
 			request.end();
 		}
 	});
-	//下载方法
+	//download
 	var download = function(url, dir, filename) {
 		request.head(url, function(err, res, body) {
 			request(url).pipe(fs.createWriteStream(dir + "/" + filename));
 		});
 	};
 }
-
-
 	var opts = {
 		url: 'http://sexy.faceks.com/post/2c9c66_6a006f0',
 		header: {

@@ -8,37 +8,34 @@
 var cheerio = require("cheerio");
 var fs = require("fs");
 var request = require("request");
-var AV = require('avoscloud-sdk').AV;
-AV.initialize("a5zjlnxgv6vhjnstba351wh97s3tc40hsot0no9j2b9wa153", "qhod8u5iijtvgm16g07gw1dm8f4mgmtqnthsloc7rqkyoxgb");
 
-var opts = {
-	url: 'http://daily.zhihu.com/story/4817486',
-	header: {
-		'Connection': 'keep-alive',
-		'Accept-Language':'zh-CN,zh;q=0.8',
-		'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36',
-		'Referer': 'http://www.zhihu.com'
 
+// for(var i=2;i<=2;i++){
+	var opts = {
+		url: 'http://blog.infographics.tw/page/2/',
+		header: {
+			'Connection': 'keep-alive',
+			'Accept-Language':'zh-CN,zh;q=0.8',
+			'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36',
+			'Referer': 'http://blog.infographics.tw/page/2/'
+
+		}
 	}
-}
-
-request(opts, function(error, response, body) {
+	request(opts.url, function(error,response,body) {
 		if (!error && response.statusCode == 200) {
-			var $ = cheerio.load(body);
-				var TestObject = AV.Object.extend("dailyNews");
-				var testObject = new TestObject();
-				testObject.save({question:$(".headline-title").text(),img_url:$(".img-wrap img").attr("src"),content:$('.content').html(),title:$(".headline-title").text(),big_img:$(".img-wrap img").attr("src"),url_href:opts.url}, {
-							success: function(url_href) {
-								console.log("获取详情成功");	
-								// arr.push(url_href.attributes.url_href);
-								
-														
-							}
-					});
+			var $ = cheerio.load(body,{decodeEntities: false});
+			var contents=$("li.item h2");
+			console.log(contents.length);
+			for(var i=0;i<contents.length;i++){
+				console.log($(contents[i]).text());
+			}
 		} else {
 			request.end();
 		}
 	});
+
+// }
+
 
 
 

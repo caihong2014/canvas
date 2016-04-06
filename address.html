@@ -1,23 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>test</title>
-</head>
-<body>
-<a href="http://baidu.com" onclick="this.style.color='red'; this.style.background='blue';return false;">百度</a>
-<script type="text/javascript">
-var a = 1;
-function b() {
-	var a = 2;
-	function c() {
-		console.log(a);
-	}
-	return c;
-	}
-b()(); //2
-
-
-</script>
-</body>
-</html>
+<div class="public-cont fl ml10">
+    <div class="user-msg-box">
+        <h3 class="tit-h3 pl40 clearfix">心电中心<a href="javascript:;" class="fr back-ecg">返回心电中心</a></h3>
+    </div>
+    <!--上传数据-->
+    <div class="upload-data">
+        <div class="up-box">
+            <form>
+                <h4 class="tit-h4 pl20">选择一名用户</h4>
+                <input class="input-grey w240" type="text" placeholder="选择用户" />
+                <h4 class="tit-h4 pl20">上传数据</h4>
+                <input class="input-grey w240" type="text" placeholder="选择文件" readOnly/>
+                <input class="public-none-filed" type="file" name="fileFiled" />
+                <h4 class="tit-h4 pl20">心电测试时间</h4>
+                <input class="input-grey w50" type="text" placeholder="年" />
+                <input class="input-grey w50" type="text" placeholder="月" />
+                <input class="input-grey w50" type="text" placeholder="日" />
+            </form>
+            <p class="queren-btn-box mt30"><a class="btn-blue" href="javascript:void(0);">立即确认</a></p>
+            <p class="queren-btn-box quxiao"><a class="pr50" href="javascript:void(0);">取消</a></p>
+        </div>
+        <div class="find-user-box">
+            <div class="find-name">
+                查找用户
+                <input type="text" />
+            </div>
+            <div class="find-msg">
+                <ul>
+                    <li class="text-cnter">查询到“姜泽”等两个用户</li>
+                    <li class="clearfix">
+                        <i class="fl"></i>
+                        <div class="user-mesg fl">
+                            <p>姜泽，男，26岁</p>
+                            <p>身份证：123456789101112</p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <i class="fl"></i>
+                        <div class="user-mesg fl">
+                            <p>姜泽，男，26岁</p>
+                            <p>证：123456789101112</p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <i class="fl"></i>
+                        <div class="user-mesg fl">
+                            <p>姜泽，男，26岁</p>
+                            <p>证：123456789101112</p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <i class="fl"></i>
+                        <div class="user-mesg fl">
+                            <p>姜泽，男，26岁</p>
+                            <p>证：123456789101112</p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <i class="fl"></i>
+                        <div class="user-mesg fl">
+                            <p>姜泽，男，26岁</p>
+                            <p>证：123456789101112</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fl"></i>
+                        <div class="user-mesg fl">
+                            <p>姜泽，男，26岁</p>
+                            <p>证：123456789101112</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--上传成功-->
+    <div class="upload-succeed">
+        <a href="javascript:void(0);"><em class="f-40">√</em><h2 class="f-18 mt20">上传成功</h2></a>
+    </div>
+</div>
+<div class="public-cont-right fr h960">
+    <h3 class="tit-h3 pl20">订单状态</h3>
+    <div class="user-hart-box">
+        <p>今日申请诊断<span>12345</span>份</p>
+        <p>今日诊断数量<span>12345</span>份</p>
+        <p>今日尚待诊断<span>12345</span>份</p>
+    </div>
+</div>
